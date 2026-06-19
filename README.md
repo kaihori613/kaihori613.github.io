@@ -1,2 +1,2 @@
 # kai-hori.github.io
-I am an Aerospace and Mechanical Engineering student at UC Davis interested in spacecraft systems engineering, mission design, simulation, and applied hardware development. 
+I am a recent graduate in Aerospace and Mechanical Engineering from UC Davis. I am interested in spacecraft systems engineering, mission design, simulation, and applied hardware development. 
