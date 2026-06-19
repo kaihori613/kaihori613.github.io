@@ -1,3 +1,97 @@
+
+/
+Claude finished the response
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Kai Hori — Aerospace & Mechanical Engineering</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2
+
+pasted
+
+can you edit the porfolio to include the files i have attached?
+
+4:23 PM
+
+Strategized integrating attached project files into portfolio
+Strategized integrating attached project files into portfolio
+I'll help you incorporate your attached files into the portfolio. First, let me read through them to understand the projects so I can represent them accurately. Let me start by checking the relevant skills and then reviewing your files.
+
+
+Inventoried attached files to integrate into portfolio
+Inventoried attached files to integrate into portfolio
+Now let me get a quick inventory of all your project files so I understand what I'm working with.
+
+
+Deciphering specialized bundle format and examining manifest
+Deciphering specialized bundle format and examining manifest
+The files aren't standard PDFs — most are ZIP archives and one is plain text. Let me look inside to understand their actual structure.
+
+
+Parsing ODIN mission documentation and reviewing attachments
+Parsing ODIN mission documentation and reviewing attachments
+These are pre-processed bundles — each "PDF" is a ZIP containing page images (JPEG), extracted text (TXT), and a manifest. Let me extract and read them all so I understand your projects.
+
+
+Skimming resume and project files for portfolio integration
+Skimming resume and project files for portfolio integration
+Excellent — the ODIN CDR is comprehensive. Now let me read the text content from all the other bundles.
+
+
+Cataloging project files and design portfolio components
+Cataloging project files and design portfolio components
+Now let me read the opening pages of each coursework project to understand what they cover.
+
+
+Reconciled multiple project versions and identified Kai's role assignments
+Reconciled multiple project versions and identified Kai's role assignments
+Let me read the opening of your detailed communications subsystem report and check the two images.
+
+
+Examined attached files to understand portfolio modifications
+Examined attached files to understand portfolio modifications
+Now let me look at the two images so I can use them in the portfolio.
+
+
+Preserving existing design aesthetic while extending it consistently
+Preserving existing design aesthetic while extending it consistently
+Both images are real captures from your ground-station work — the QFH antenna in the field and a Meteor-M2 weather pass over the US West Coast. I now have everything I need. Let me quickly check the frontend design skill before rebuilding the page so the additions match the existing aesthetic.
+
+
+Deliberating file naming conventions and presentation strategy
+Deliberating file naming conventions and presentation strategy
+I've now read all 15 files. Here's what I found and how I'll incorporate them:
+
+ODIN is your flagship capstone (inspecting ESA's Solar Orbiter, heliocentric, X-band comms) — covered by the CDR, your 74-page Communications/C&DH subsystem report, and the showcase posters.
+Coursework/reports: supersonic wedge shock analysis (EAE 198), aircraft dynamics & stability (EAE 129), truss-braced wing flutter (EME 139), wing structural analysis (EAE 135), pressure vessel design (EME 150A), and applied aerodynamics (EAE 127).
+Two images: your QFH antenna in the field + a Meteor-M2 weather capture over the US West Coast — real proof of the MOON ground-station work.
+Your resume adds detail I'll fold in (dual B.S. Aero + Mech, 3.61 GPA, NeuralX & CFPA labs, bilingual JP/EN, the CPOD→ISS redesign capstone).
+Let me build the updated portfolio, keeping your exact dark/amber aesthetic and wiring every file in as a real downloadable link.
+
+
+Strategized file placement and portfolio integration approach
+Strategized file placement and portfolio integration approach
+Done. Every one of your 15 files is now wired into the page as a real link, keeping your dark/amber aesthetic intact.
+
+What changed:
+
+Projects now has seven cards. Three cover ODIN (the CDR, your 74-page comms/C&DH subsystem report, and the showcase posters), plus the NeuralX SPH sim, the EAE 198 supersonic wedge study, and a combined EAE 129 dynamics/stability card linking both reports. The MOON ground station is a full-width featured card showing your QFH antenna photo and the decoded Meteor-M2 capture side by side.
+A new Technical Reports & Coursework section (03) lists the remaining six as a clean download list: EME 139 flutter, EAE 135 structures (×2), EME 150A pressure vessel, and EAE 127 aero (×2).
+About, Experience, and Skills are updated from your resume — dual B.S. + 3.61 GPA, bilingual JP/EN, the CPOD→ISS redesign capstone, NeuralX and the Aeroacoustics lab, and your actual toolset (FreeFlyer, ANSYS, NASTRAN/PATRAN, Fortran, milling/CNC, etc.).
+One thing you need to do: drop all the PDFs and both images (qhf.jpg, Meteor_m2_4.jpg) into the same folder as index.html in your repo, with these exact filenames. The links are relative, so the page expects them right alongside it — same pattern your resume link already used.
+
+Two small calls I made: I filled the empty LinkedIn placeholder with linkedin.com/in/kai-hori from your resume, and left your Gmail as-is since you'd set it deliberately (your resume lists khori@ucdavis.edu if you'd rather use that instead).
+
+
+Index
+Code · HTML 
+
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +102,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --bg: #080b10;
     --bg2: #0d1117;
@@ -23,9 +117,9 @@
     --mono: 'Space Mono', monospace;
     --display: 'Syne', sans-serif;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: var(--display);
     background: var(--bg);
@@ -33,7 +127,7 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-
+ 
   /* Grid background */
   body::before {
     content: '';
@@ -46,7 +140,7 @@
     pointer-events: none;
     z-index: 0;
   }
-
+ 
   /* NAV */
   nav {
     position: fixed;
@@ -60,20 +154,20 @@
     background: rgba(8,11,16,0.85);
     backdrop-filter: blur(12px);
   }
-
+ 
   .nav-logo {
     font-family: var(--mono);
     font-size: 13px;
     color: var(--amber);
     letter-spacing: 0.1em;
   }
-
+ 
   .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2.2rem;
     list-style: none;
   }
-
+ 
   .nav-links a {
     font-family: var(--mono);
     font-size: 11px;
@@ -83,9 +177,9 @@
     text-transform: uppercase;
     transition: color 0.2s;
   }
-
+ 
   .nav-links a:hover { color: var(--amber); }
-
+ 
   /* SECTIONS */
   section {
     position: relative;
@@ -94,7 +188,7 @@
     margin: 0 auto;
     padding: 6rem 3rem;
   }
-
+ 
   /* HERO */
   #hero {
     min-height: 100vh;
@@ -104,7 +198,7 @@
     padding-top: 8rem;
     max-width: 1100px;
   }
-
+ 
   .hero-label {
     font-family: var(--mono);
     font-size: 11px;
@@ -116,7 +210,7 @@
     align-items: center;
     gap: 0.75rem;
   }
-
+ 
   .hero-label::before {
     content: '';
     display: block;
@@ -124,7 +218,7 @@
     height: 1px;
     background: var(--amber);
   }
-
+ 
   h1 {
     font-size: clamp(3.5rem, 8vw, 7rem);
     font-weight: 800;
@@ -133,22 +227,22 @@
     margin-bottom: 1.5rem;
     color: var(--text);
   }
-
+ 
   .hero-tagline {
     font-size: 1.1rem;
     color: var(--text-muted);
-    max-width: 480px;
+    max-width: 520px;
     line-height: 1.7;
     margin-bottom: 3rem;
     font-weight: 400;
   }
-
+ 
   .hero-ctas {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
   }
-
+ 
   .btn-primary {
     padding: 0.75rem 2rem;
     background: var(--amber);
@@ -163,9 +257,9 @@
     cursor: pointer;
     transition: opacity 0.2s;
   }
-
+ 
   .btn-primary:hover { opacity: 0.85; }
-
+ 
   .btn-ghost {
     padding: 0.75rem 2rem;
     background: transparent;
@@ -178,9 +272,9 @@
     border: 1px solid var(--border);
     transition: border-color 0.2s, color 0.2s;
   }
-
+ 
   .btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
-
+ 
   .hero-stats {
     display: flex;
     gap: 3rem;
@@ -188,7 +282,7 @@
     padding-top: 3rem;
     border-top: 1px solid var(--border);
   }
-
+ 
   .stat-num {
     font-family: var(--mono);
     font-size: 2rem;
@@ -196,13 +290,13 @@
     font-weight: 700;
     line-height: 1;
   }
-
+ 
   .stat-label {
     font-size: 12px;
     color: var(--text-muted);
     margin-top: 0.4rem;
   }
-
+ 
   /* SECTION HEADER */
   .section-header {
     display: flex;
@@ -210,27 +304,27 @@
     gap: 1rem;
     margin-bottom: 3.5rem;
   }
-
+ 
   .section-index {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--amber);
     letter-spacing: 0.2em;
   }
-
+ 
   h2 {
     font-size: 2.2rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--text);
   }
-
+ 
   .section-line {
     flex: 1;
     height: 1px;
     background: var(--border);
   }
-
+ 
   /* ABOUT */
   .about-grid {
     display: grid;
@@ -238,23 +332,23 @@
     gap: 4rem;
     align-items: start;
   }
-
+ 
   .about-bio {
     font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.85;
   }
-
+ 
   .about-bio p + p { margin-top: 1.2rem; }
-
+ 
   .about-bio strong { color: var(--text); font-weight: 600; }
-
+ 
   .about-details {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
   }
-
+ 
   .detail-item {
     display: flex;
     flex-direction: column;
@@ -263,7 +357,7 @@
     border: 1px solid var(--border);
     background: var(--bg2);
   }
-
+ 
   .detail-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -271,12 +365,12 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
   }
-
+ 
   .detail-value {
     font-size: 14px;
     color: var(--text);
   }
-
+ 
   /* PROJECTS */
   .projects-grid {
     display: grid;
@@ -284,17 +378,15 @@
     gap: 1.5px;
     background: var(--border);
   }
-
+ 
   .project-card {
     background: var(--bg2);
     padding: 2rem;
-    text-decoration: none;
     display: block;
-    transition: background 0.2s;
     position: relative;
     overflow: hidden;
   }
-
+ 
   .project-card::before {
     content: '';
     position: absolute;
@@ -305,10 +397,9 @@
     transform-origin: left;
     transition: transform 0.3s;
   }
-
-  .project-card:hover { background: var(--bg3); }
+ 
   .project-card:hover::before { transform: scaleX(1); }
-
+ 
   .project-tag {
     font-family: var(--mono);
     font-size: 10px;
@@ -317,7 +408,7 @@
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
-
+ 
   .project-title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -325,20 +416,20 @@
     margin-bottom: 0.75rem;
     letter-spacing: -0.01em;
   }
-
+ 
   .project-desc {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
-
+ 
   .project-tools {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-
+ 
   .tool-badge {
     font-family: var(--mono);
     font-size: 10px;
@@ -347,27 +438,130 @@
     padding: 0.2rem 0.6rem;
     letter-spacing: 0.1em;
   }
-
-  .project-arrow {
-    position: absolute;
-    top: 2rem; right: 2rem;
-    font-size: 18px;
-    color: var(--text-dim);
-    transition: color 0.2s, transform 0.2s;
+ 
+  /* Document links inside project cards */
+  .project-docs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
   }
-
-  .project-card:hover .project-arrow {
+ 
+  .doc-link {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--amber);
-    transform: translate(3px, -3px);
+    border: 1px solid rgba(240,160,48,0.4);
+    padding: 0.45rem 0.8rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
   }
-
+ 
+  .doc-link::after { content: '↗'; font-size: 11px; }
+  .doc-link:hover { background: var(--amber); color: #080b10; }
+ 
+  /* Featured media card (MOON ground station) */
+  .project-card.media-card {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 2.25rem;
+    align-items: center;
+  }
+ 
+  .project-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+ 
+  .project-media figure { margin: 0; background: var(--bg3); }
+ 
+  .project-media img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    background: var(--bg3);
+  }
+ 
+  .project-media figcaption {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.55rem 0.65rem;
+    background: var(--bg2);
+    line-height: 1.4;
+  }
+ 
+  /* TECHNICAL REPORTS LIST */
+  .docs-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+  }
+ 
+  .docs-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.15rem 1.5rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+ 
+  .docs-row:last-child { border-bottom: none; }
+  .docs-row:hover { background: var(--amber-dim); }
+ 
+  .docs-row-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+ 
+  .docs-code {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+ 
+  .docs-title {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.45;
+  }
+ 
+  .docs-pdf {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+ 
+  .docs-row:hover .docs-pdf { color: var(--amber); }
+ 
   /* EXPERIENCE */
   .experience-list {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-
+ 
   .exp-item {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -375,13 +569,13 @@
     border-top: 1px solid var(--border);
     padding: 2rem 0;
   }
-
+ 
   .exp-item:last-child { border-bottom: 1px solid var(--border); }
-
+ 
   .exp-meta {
     padding-right: 2rem;
   }
-
+ 
   .exp-period {
     font-family: var(--mono);
     font-size: 11px;
@@ -389,7 +583,7 @@
     letter-spacing: 0.1em;
     line-height: 1.4;
   }
-
+ 
   .exp-type {
     font-family: var(--mono);
     font-size: 10px;
@@ -398,42 +592,42 @@
     text-transform: uppercase;
     margin-top: 0.5rem;
   }
-
+ 
   .exp-content {}
-
+ 
   .exp-role {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 0.25rem;
   }
-
+ 
   .exp-org {
     font-size: 13px;
     color: var(--text-muted);
     margin-bottom: 0.75rem;
   }
-
+ 
   .exp-desc {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.75;
   }
-
+ 
   .exp-desc ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
   }
-
+ 
   .exp-desc li::before {
     content: '—';
     color: var(--amber);
     margin-right: 0.6rem;
     font-family: var(--mono);
   }
-
+ 
   /* SKILLS */
   .skills-grid {
     display: grid;
@@ -441,12 +635,12 @@
     gap: 1.5px;
     background: var(--border);
   }
-
+ 
   .skill-group {
     background: var(--bg2);
     padding: 1.75rem;
   }
-
+ 
   .skill-group-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -455,13 +649,13 @@
     text-transform: uppercase;
     margin-bottom: 1.25rem;
   }
-
+ 
   .skill-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-
+ 
   .skill-tag {
     font-family: var(--mono);
     font-size: 11px;
@@ -471,12 +665,12 @@
     padding: 0.3rem 0.75rem;
     transition: color 0.2s, border-color 0.2s;
   }
-
+ 
   .skill-tag:hover {
     color: var(--amber);
     border-color: rgba(240,160,48,0.4);
   }
-
+ 
   /* CONTACT */
   .contact-inner {
     display: grid;
@@ -484,20 +678,20 @@
     gap: 4rem;
     align-items: start;
   }
-
+ 
   .contact-text {
     font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.8;
   }
-
+ 
   .contact-links {
     display: flex;
     flex-direction: column;
     gap: 0;
     border: 1px solid var(--border);
   }
-
+ 
   .contact-link {
     display: flex;
     justify-content: space-between;
@@ -507,10 +701,10 @@
     border-bottom: 1px solid var(--border);
     transition: background 0.2s;
   }
-
+ 
   .contact-link:last-child { border-bottom: none; }
   .contact-link:hover { background: var(--amber-dim); }
-
+ 
   .contact-link-label {
     font-family: var(--mono);
     font-size: 11px;
@@ -518,12 +712,12 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
-
+ 
   .contact-link-value {
     font-size: 13px;
     color: var(--text);
   }
-
+ 
   /* FOOTER */
   footer {
     position: relative;
@@ -535,31 +729,36 @@
     align-items: center;
     max-width: 100%;
   }
-
+ 
   footer p {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--text-dim);
     letter-spacing: 0.1em;
   }
-
+ 
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
+ 
   .fade-up {
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
   }
-
+ 
   .delay-1 { animation-delay: 0.1s; }
   .delay-2 { animation-delay: 0.2s; }
   .delay-3 { animation-delay: 0.35s; }
   .delay-4 { animation-delay: 0.5s; }
   .delay-5 { animation-delay: 0.65s; }
-
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up { animation: none; opacity: 1; }
+    html { scroll-behavior: auto; }
+  }
+ 
   /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
@@ -568,33 +767,39 @@
     h1 { font-size: 3rem; }
     .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
     .projects-grid { grid-template-columns: 1fr; }
+    .project-card.media-card { grid-template-columns: 1fr; gap: 1.5rem; }
+    .project-media img { height: 220px; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .exp-item { grid-template-columns: 1fr; }
+    .exp-meta { padding-bottom: 0.75rem; }
     .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .docs-row { flex-wrap: wrap; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
   }
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <span class="nav-logo">KAI HORI</span>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#reports">Reports</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-label fade-up">Aerospace & Mechanical Engineering · UC Davis</div>
   <h1 class="fade-up delay-1">Kai<br>Hori.</h1>
   <p class="hero-tagline fade-up delay-2">
     Building systems that operate where failure isn't an option —
-    from spacecraft mission design to applied hardware development.
+    from spacecraft mission design and X-band link budgets to RF hardware,
+    structural analysis, and numerical simulation.
   </p>
   <div class="hero-ctas fade-up delay-3">
     <a href="#projects" class="btn-primary">View Work</a>
@@ -602,20 +807,20 @@
   </div>
   <div class="hero-stats fade-up delay-4">
     <div>
-      <div class="stat-num">08+</div>
-      <div class="stat-label">Projects</div>
+      <div class="stat-num">12</div>
+      <div class="stat-label">Projects & Reports</div>
+    </div>
+    <div>
+      <div class="stat-num">03</div>
+      <div class="stat-label">Research Labs</div>
     </div>
     <div>
       <div class="stat-num">02</div>
-      <div class="stat-label">Internships</div>
-    </div>
-    <div>
-      <div class="stat-num">01</div>
-      <div class="stat-label">Research Roles</div>
+      <div class="stat-label">B.S. Degrees</div>
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="section-header">
@@ -626,21 +831,22 @@
   <div class="about-grid">
     <div class="about-bio">
       <p>
-        I'm <strong>Kai Hori</strong>, an Aerospace and Mechanical Engineering student at
-        <strong>UC Davis</strong> with a focus on spacecraft systems engineering,
-        mission design, simulation, and applied hardware development.
+        I'm <strong>Kai Hori</strong>, a dual-degree Aerospace and Mechanical Engineering
+        student at <strong>UC Davis</strong> focused on spacecraft systems engineering,
+        mission design, communications, and applied hardware development.
       </p>
       <p>
-        I'm drawn to the intersection of rigorous analysis and hands-on building —
-        from spacecraft communication link budgets and orbital mechanics to RF hardware,
-        satellite ground stations, CAD, and numerical simulation.
+        I work across the full arc of an engineering problem — from spacecraft link budgets,
+        orbital mechanics, and C&amp;DH architecture to RF hardware, structural and aeroelastic
+        analysis, CFD, and GPU-based numerical simulation. Most recently I led the
+        <strong>communications and C&amp;DH subsystem</strong> for ODIN, a Solar Orbiter–inspired
+        heliocentric inspection spacecraft.
       </p>
       <p>
-        I'm currently part of the HRVIP Lab at UC Davis, where I contribute to the
-        MOON ground station concept through satellite reception, SDR workflows, and
-        antenna development. I am seeking full-time opportunities in spacecraft systems,
-        mission operations, RF/communications, simulation, and applied aerospace engineering
-        after graduation in June 2026.
+        I'm currently a researcher in the <strong>HRVIP Lab</strong>, contributing to the MOON
+        ground-station concept through QFH antenna development, SDR satellite reception, and
+        automated tracking and decoding. I'm seeking full-time opportunities in spacecraft systems,
+        mission operations, RF/communications, and simulation after graduation in June 2026.
       </p>
     </div>
     <div class="about-details">
@@ -649,16 +855,20 @@
         <span class="detail-value">University of California, Davis</span>
       </div>
       <div class="detail-item">
-        <span class="detail-label">Degree</span>
-        <span class="detail-value">B.S. Aerospace & Mechanical Engineering</span>
+        <span class="detail-label">Degrees</span>
+        <span class="detail-value">B.S. Aerospace Science & Eng. + B.S. Mechanical Eng.</span>
       </div>
       <div class="detail-item">
-        <span class="detail-label">Expected Graduation</span>
-        <span class="detail-value">June 2026</span>
+        <span class="detail-label">GPA / Graduation</span>
+        <span class="detail-value">3.61 / 4.0 · June 2026</span>
       </div>
       <div class="detail-item">
         <span class="detail-label">Focus Areas</span>
         <span class="detail-value">Spacecraft Systems · Communications · Simulation</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Languages</span>
+        <span class="detail-value">Japanese (Fluent) · English (Fluent)</span>
       </div>
       <div class="detail-item">
         <span class="detail-label">Location</span>
@@ -667,7 +877,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header">
@@ -676,32 +886,108 @@
     <div class="section-line"></div>
   </div>
   <div class="projects-grid">
-
-    <a href="#" class="project-card">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">Spacecraft Systems</div>
-      <div class="project-title">ODIN Communication & C&amp;DH Subsystem</div>
+ 
+    <!-- ODIN MISSION -->
+    <div class="project-card">
+      <div class="project-tag">Spacecraft Systems · Capstone</div>
+      <div class="project-title">ODIN — Spacecraft Inspection Mission</div>
       <p class="project-desc">
-        Preliminary subsystem design for a Solar Orbiter-inspired inspection spacecraft.
-        Led communications and C&amp;DH work, including X-band architecture, HGA/LGA trades,
-        link budget analysis, data-rate sizing, and contact window planning.
+        Senior capstone design of ODIN (Optical Detection &amp; INspection), a heliocentric
+        spacecraft that rendezvouses with and inspects ESA's Solar Orbiter to assess degradation
+        for mission extension. I led the Communications &amp; C&amp;DH subsystem across requirements,
+        CONOPS, architecture, and the Critical Design Review.
       </p>
       <div class="project-tools">
+        <span class="tool-badge">Systems Eng.</span>
         <span class="tool-badge">MATLAB</span>
         <span class="tool-badge">FreeFlyer</span>
+        <span class="tool-badge">X-Band</span>
+      </div>
+      <div class="project-docs">
+        <a href="ODIN_CDR.pdf" class="doc-link" target="_blank" rel="noopener">Critical Design Review</a>
+      </div>
+    </div>
+ 
+    <!-- ODIN COMMS SUBSYSTEM -->
+    <div class="project-card">
+      <div class="project-tag">Communications · C&amp;DH</div>
+      <div class="project-title">ODIN Communications &amp; C&amp;DH Subsystem</div>
+      <p class="project-desc">
+        Detailed subsystem report for ODIN's X-band deep-space link. Covers redundant transponders,
+        TWTA and HGA/LGA architecture, a link budget holding ≥6 dB margin from 0.7–2.0 AU, CCSDS
+        framing, data-rate sizing, housekeeping budgets, ESTRACK/DSN compatibility, and contact-window
+        analysis.
+      </p>
+      <div class="project-tools">
+        <span class="tool-badge">Link Budget</span>
+        <span class="tool-badge">CCSDS</span>
         <span class="tool-badge">Excel</span>
         <span class="tool-badge">LaTeX</span>
       </div>
-    </a>
-
-    <a href="#" class="project-card">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">Numerical Simulation</div>
+      <div class="project-docs">
+        <a href="ODIN_COMMUNICATIONS_SUBSYSTEM.pdf" class="doc-link" target="_blank" rel="noopener">Subsystem Report</a>
+      </div>
+    </div>
+ 
+    <!-- MOON GROUND STATION — FEATURED MEDIA CARD -->
+    <div class="project-card media-card">
+      <div class="project-media">
+        <figure>
+          <img src="qhf.jpg" alt="Quadrifilar helical antenna mounted on a tripod in the field, connected to a laptop for satellite reception" loading="lazy">
+          <figcaption>QFH antenna · field reception setup</figcaption>
+        </figure>
+        <figure>
+          <img src="Meteor_m2_4.jpg" alt="Meteor-M2 weather satellite image captured over the US West Coast" loading="lazy">
+          <figcaption>Meteor-M2 pass · US West Coast</figcaption>
+        </figure>
+      </div>
+      <div>
+        <div class="project-tag">RF Hardware · Research</div>
+        <div class="project-title">MOON Ground Station — QFH Antenna &amp; SDR</div>
+        <p class="project-desc">
+          Hands-on ground-station work for the HRVIP Lab's MOON concept: a hand-built quadrifilar
+          helical antenna paired with an SDR reception, tracking, and decoding pipeline for LEO
+          weather satellites. The capture at right is a real Meteor-M2 pass received and decoded with
+          this setup — building toward a university mission-operations facility for real-time data
+          reception and education.
+        </p>
+        <div class="project-tools">
+          <span class="tool-badge">RTL-SDR</span>
+          <span class="tool-badge">SatDump</span>
+          <span class="tool-badge">SDR++</span>
+          <span class="tool-badge">QFH Antenna</span>
+          <span class="tool-badge">OpenSCAD</span>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ODIN POSTERS -->
+    <div class="project-card">
+      <div class="project-tag">Mission Design · Showcase</div>
+      <div class="project-title">ODIN Design Showcase Posters</div>
+      <p class="project-desc">
+        The public-facing poster set for ODIN, summarizing the full mission across navigation and
+        systems engineering; thermal, structures, and propulsion; and ADCS, payload, power, and
+        communications — including spacecraft properties, the GNC CONOPS, and subsystem highlights.
+      </p>
+      <div class="project-tools">
+        <span class="tool-badge">Systems</span>
+        <span class="tool-badge">OnShape</span>
+        <span class="tool-badge">Mission Design</span>
+      </div>
+      <div class="project-docs">
+        <a href="Design_Showcase_Posters.pdf" class="doc-link" target="_blank" rel="noopener">Poster Set</a>
+      </div>
+    </div>
+ 
+    <!-- SPH SIM -->
+    <div class="project-card">
+      <div class="project-tag">Numerical Simulation · NeuralX</div>
       <div class="project-title">SPH Fluid Simulation</div>
       <p class="project-desc">
-        Real-time Smoothed Particle Hydrodynamics simulation developed during a summer internship.
-        Implemented particle-based density, pressure, viscosity, and interaction models with GPU
-        compute shaders for fluid behavior visualization.
+        Real-time Smoothed Particle Hydrodynamics simulation built during a research internship at
+        NeuralX. Implemented particle-based density, pressure, viscosity, and interaction models on
+        GPU compute shaders, then profiled and optimized the pipeline for interactive fluid behavior.
       </p>
       <div class="project-tools">
         <span class="tool-badge">Unity</span>
@@ -709,54 +995,120 @@
         <span class="tool-badge">HLSL</span>
         <span class="tool-badge">Compute Shaders</span>
       </div>
-    </a>
-
-    <a href="#" class="project-card">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">RF Hardware</div>
-      <div class="project-title">MOON QFH Antenna &amp; Ground Station</div>
+    </div>
+ 
+    <!-- SUPERSONIC WEDGE -->
+    <div class="project-card">
+      <div class="project-tag">Compressible Aerodynamics</div>
+      <div class="project-title">Supersonic Wedge Shock-Wave Analysis</div>
       <p class="project-desc">
-        Design and fabrication work for a quadrifilar helical antenna and SDR-based satellite
-        reception workflow for the MOON ground station concept. Focused on low-cost LEO weather
-        satellite image reception, tracking, and decoding.
+        Study of oblique-shock formation over a 2-D wedge at Mach 2.0, 2.5, and 3.0 with 5°, 10°,
+        and 15° half-angles. Compared shock angles from the θ–β–M relation, Schlieren imagery, and
+        ANSYS Fluent Mach contours, with side-by-side figures and post-shock property tables.
       </p>
       <div class="project-tools">
-        <span class="tool-badge">RTL-SDR</span>
-        <span class="tool-badge">SatDump</span>
-        <span class="tool-badge">SDR++</span>
-        <span class="tool-badge">OpenSCAD</span>
+        <span class="tool-badge">ANSYS Fluent</span>
+        <span class="tool-badge">CFD</span>
+        <span class="tool-badge">θ–β–M</span>
       </div>
-    </a>
-
-    <a href="#" class="project-card">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">Coursework Analysis</div>
-      <div class="project-title">Orbital Mechanics, Structures &amp; Aeroelasticity</div>
+      <div class="project-docs">
+        <a href="EAE198_project.pdf" class="doc-link" target="_blank" rel="noopener">Report</a>
+      </div>
+    </div>
+ 
+    <!-- AIRCRAFT DYNAMICS -->
+    <div class="project-card">
+      <div class="project-tag">Stability & Control</div>
+      <div class="project-title">Aircraft Dynamics, Stability &amp; Control</div>
       <p class="project-desc">
-        Selected UC Davis engineering coursework projects including ground station visibility
-        analysis, satellite pass prediction, flutter speed determination, structural analysis,
-        controls, materials, and experimental data reduction.
+        Two EAE 129 projects: a state-space simulation of longitudinal aircraft response with
+        handling-qualities and reduced-order analysis, plus a wind-tunnel study of the Aggie UAV's
+        static stability — deriving stability derivatives, neutral point, stability margin, and
+        trimmed elevator angle from measured lift and moment data.
       </p>
       <div class="project-tools">
         <span class="tool-badge">MATLAB</span>
-        <span class="tool-badge">R</span>
-        <span class="tool-badge">ANSYS</span>
-        <span class="tool-badge">LaTeX</span>
+        <span class="tool-badge">Simulink</span>
+        <span class="tool-badge">Flying Qualities</span>
       </div>
-    </a>
-
+      <div class="project-docs">
+        <a href="EAE_129_Final_Project.pdf" class="doc-link" target="_blank" rel="noopener">Response Sim</a>
+        <a href="EAE_129_Midterm_Project.pdf" class="doc-link" target="_blank" rel="noopener">Wind-Tunnel</a>
+      </div>
+    </div>
+ 
   </div>
 </section>
-
+ 
+<!-- TECHNICAL REPORTS & COURSEWORK -->
+<section id="reports">
+  <div class="section-header">
+    <span class="section-index">03</span>
+    <h2>Technical Reports &amp; Coursework</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="docs-list">
+ 
+    <a href="EME_139_Team_Term_Paper_Final_Report.pdf" class="docs-row" target="_blank" rel="noopener">
+      <div class="docs-row-main">
+        <span class="docs-code">EME 139 · Aeroelasticity</span>
+        <span class="docs-title">Truss-Braced Wing — Flutter &amp; Divergence Prediction</span>
+      </div>
+      <span class="docs-pdf">PDF ↗</span>
+    </a>
+ 
+    <a href="EAE_135_Project_2.pdf" class="docs-row" target="_blank" rel="noopener">
+      <div class="docs-row-main">
+        <span class="docs-code">EAE 135 · Structures</span>
+        <span class="docs-title">Aircraft Wing Structural Analysis — Axial Stress &amp; Safety Factor (Project 2)</span>
+      </div>
+      <span class="docs-pdf">PDF ↗</span>
+    </a>
+ 
+    <a href="EAE_135_Project_3.pdf" class="docs-row" target="_blank" rel="noopener">
+      <div class="docs-row-main">
+        <span class="docs-code">EAE 135 · Structures</span>
+        <span class="docs-title">Aircraft Wing Structural Analysis — Shear Flow &amp; Torsion (Project 3)</span>
+      </div>
+      <span class="docs-pdf">PDF ↗</span>
+    </a>
+ 
+    <a href="EME150_Project.pdf" class="docs-row" target="_blank" rel="noopener">
+      <div class="docs-row-main">
+        <span class="docs-code">EME 150A · Machine Design</span>
+        <span class="docs-title">Horizontal Pressure Vessel Design — ASME BPVC, OnShape + Fusion FEA</span>
+      </div>
+      <span class="docs-pdf">PDF ↗</span>
+    </a>
+ 
+    <a href="EAE127HW6.pdf" class="docs-row" target="_blank" rel="noopener">
+      <div class="docs-row-main">
+        <span class="docs-code">EAE 127 · Applied Aerodynamics</span>
+        <span class="docs-title">Boundary Layers &amp; Flight Regimes — Reynolds Number Analysis</span>
+      </div>
+      <span class="docs-pdf">PDF ↗</span>
+    </a>
+ 
+    <a href="EAE127HW7.pdf" class="docs-row" target="_blank" rel="noopener">
+      <div class="docs-row-main">
+        <span class="docs-code">EAE 127 · Applied Aerodynamics</span>
+        <span class="docs-title">Airfoil Selection &amp; Performance — Cruise Design Conditions</span>
+      </div>
+      <span class="docs-pdf">PDF ↗</span>
+    </a>
+ 
+  </div>
+</section>
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header">
-    <span class="section-index">03</span>
+    <span class="section-index">04</span>
     <h2>Experience</h2>
     <div class="section-line"></div>
   </div>
   <div class="experience-list">
-
+ 
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Apr 2026 –<br>Present</div>
@@ -767,102 +1119,137 @@
         <div class="exp-org">ODIN Spacecraft Inspection Mission · UC Davis</div>
         <div class="exp-desc">
           <ul>
-            <li>Lead communications and C&amp;DH subsystem design for a Solar Orbiter-inspired heliocentric inspection spacecraft.</li>
-            <li>Develop X-band link budgets, antenna trade studies, data-rate estimates, and contact window planning.</li>
-            <li>Use MATLAB, FreeFlyer, Excel, and LaTeX to support analysis, documentation, and design reviews.</li>
+            <li>Lead the communications, C&amp;DH, and ground-control design for a Solar Orbiter–inspired heliocentric inspection spacecraft.</li>
+            <li>Develop X-band link budgets, antenna trades, data and housekeeping budgets, mission-mode downlink timelines, and contact-window analyses.</li>
+            <li>Coordinate with power and payload teams and document the work through design reviews in MATLAB, FreeFlyer, Excel, and LaTeX.</li>
           </ul>
         </div>
       </div>
     </div>
-
+ 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2026 –<br>Present</div>
+        <div class="exp-period">Feb 2026 –<br>Present</div>
         <div class="exp-type">Research</div>
       </div>
       <div class="exp-content">
         <div class="exp-role">Undergraduate Researcher</div>
-        <div class="exp-org">HRVIP Lab · UC Davis</div>
+        <div class="exp-org">HRVIP Lab · MOON Initiative · UC Davis</div>
         <div class="exp-desc">
           <ul>
-            <li>Contribute to the MOON mission operations and observation concept through satellite ground station development.</li>
-            <li>Build and test RF reception workflows using QFH antenna hardware, SDR tools, satellite tracking, and image decoding software.</li>
-            <li>Support hands-on mission operations capability for real-time satellite data reception and education.</li>
+            <li>Develop ground-station capability for the Mission Operations &amp; Observation Nexus (MOON) under Prof. Robinson.</li>
+            <li>Build QFH antenna hardware and autonomous satellite tracking, reception, and image-processing workflows for LEO and GEO satellites.</li>
+            <li>Support the design of a university mission-operations facility for real-time reception, decoding, and analysis.</li>
           </ul>
         </div>
       </div>
     </div>
-
+ 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">Summer<br>Internship</div>
-        <div class="exp-type">Simulation</div>
+        <div class="exp-period">Jan 2026 –<br>Mar 2026</div>
+        <div class="exp-type">Capstone</div>
       </div>
       <div class="exp-content">
-        <div class="exp-role">SPH Simulation Developer</div>
-        <div class="exp-org">Summer Internship Project</div>
+        <div class="exp-role">Payload Lead</div>
+        <div class="exp-org">Spacecraft Inspection Mission Redesign · UC Davis</div>
         <div class="exp-desc">
           <ul>
-            <li>Developed a real-time Smoothed Particle Hydrodynamics fluid simulation using Unity and GPU compute shaders.</li>
-            <li>Implemented particle density, pressure, viscosity, and interaction force models for fluid-like motion.</li>
-            <li>Gained experience in numerical methods, physics-based simulation, GPU programming, and performance debugging.</li>
+            <li>Redesigned the NASA CPOD CubeSat proximity-operations mission into an autonomous, non-docking ISS inspection concept.</li>
+            <li>Evaluated LiDAR integration, sensor tradeoffs, and onboard-processing needs to improve RPO, inspection capability, and safety.</li>
           </ul>
         </div>
       </div>
     </div>
-
+ 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">UC Davis</div>
-        <div class="exp-type">Coursework</div>
+        <div class="exp-period">Jul 2025 –<br>Sep 2025</div>
+        <div class="exp-type">Internship</div>
       </div>
       <div class="exp-content">
-        <div class="exp-role">Engineering Analysis Projects</div>
-        <div class="exp-org">Aerospace &amp; Mechanical Engineering Coursework</div>
+        <div class="exp-role">Research Intern</div>
+        <div class="exp-org">NeuralX</div>
         <div class="exp-desc">
           <ul>
-            <li>Completed technical projects in orbital mechanics, satellite ground station visibility, structures, aeroelasticity, controls, and fluid mechanics.</li>
-            <li>Built MATLAB and R workflows for data reduction, plotting, mode-shape analysis, flutter prediction, and lab reporting.</li>
-            <li>Prepared formal engineering reports and presentations using LaTeX, figures, tables, and documented calculations.</li>
+            <li>Designed Smoothed Particle Hydrodynamics simulations to model fluid and water-like behavior.</li>
+            <li>Optimized compute-shader performance in Unity and integrated numerical methods, documenting findings for ongoing physics-based modeling R&amp;D.</li>
           </ul>
         </div>
       </div>
     </div>
-
+ 
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Dec 2024 –<br>Apr 2025</div>
+        <div class="exp-type">Research</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Research Assistant</div>
+        <div class="exp-org">Computational Flow Physics &amp; Aeroacoustics Lab · UC Davis</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Conducted a computational aeroacoustics research project in a team of two using NASA's ANOPP2.</li>
+            <li>Worked through the software's complex Fortran codebase in Visual Studio to set up and interpret cases.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">Sep 2023 –<br>Sep 2024</div>
+        <div class="exp-type">Rocketry</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Team Member</div>
+        <div class="exp-org">Aggie Propulsion &amp; Rocketry Lab · UC Davis</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Co-founded a new department focused on control systems for a liquid rocket system.</li>
+            <li>Researched system dynamics and dynamic control for a propulsive landing system.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header">
-    <span class="section-index">04</span>
+    <span class="section-index">05</span>
     <h2>Skills</h2>
     <div class="section-line"></div>
   </div>
   <div class="skills-grid">
-
+ 
     <div class="skill-group">
       <div class="skill-group-label">Software & Simulation</div>
       <div class="skill-tags">
         <span class="skill-tag">MATLAB</span>
         <span class="skill-tag">Simulink</span>
         <span class="skill-tag">FreeFlyer</span>
-        <span class="skill-tag">Excel</span>
-        <span class="skill-tag">ANSYS</span>
+        <span class="skill-tag">Ansys Fluent</span>
+        <span class="skill-tag">XFoil</span>
+        <span class="skill-tag">OpenVSP</span>
         <span class="skill-tag">Unity</span>
       </div>
     </div>
-
+ 
     <div class="skill-group">
-      <div class="skill-group-label">CAD & Design</div>
+      <div class="skill-group-label">CAD & FEA</div>
       <div class="skill-tags">
         <span class="skill-tag">SolidWorks</span>
+        <span class="skill-tag">OnShape</span>
+        <span class="skill-tag">Fusion 360</span>
+        <span class="skill-tag">NASTRAN/PATRAN</span>
         <span class="skill-tag">OpenSCAD</span>
-        <span class="skill-tag">CAD</span>
         <span class="skill-tag">3D Printing</span>
       </div>
     </div>
-
+ 
     <div class="skill-group">
       <div class="skill-group-label">Programming</div>
       <div class="skill-tags">
@@ -873,47 +1260,50 @@
         <span class="skill-tag">Fortran</span>
       </div>
     </div>
-
+ 
     <div class="skill-group">
       <div class="skill-group-label">Engineering Analysis</div>
       <div class="skill-tags">
         <span class="skill-tag">Orbital Mechanics</span>
-        <span class="skill-tag">Link Budget Analysis</span>
+        <span class="skill-tag">Link Budgets</span>
         <span class="skill-tag">Aeroelasticity</span>
-        <span class="skill-tag">Satellite Visibility</span>
+        <span class="skill-tag">Stability & Control</span>
+        <span class="skill-tag">Structural Analysis</span>
+        <span class="skill-tag">CFD</span>
         <span class="skill-tag">C&amp;DH</span>
       </div>
     </div>
-
+ 
     <div class="skill-group">
       <div class="skill-group-label">Hardware & Lab</div>
       <div class="skill-tags">
         <span class="skill-tag">RTL-SDR</span>
         <span class="skill-tag">QFH Antenna</span>
+        <span class="skill-tag">SatDump</span>
+        <span class="skill-tag">Milling / Lathing</span>
+        <span class="skill-tag">CNC</span>
         <span class="skill-tag">Soldering</span>
-        <span class="skill-tag">3D Printing</span>
-        <span class="skill-tag">Satellite Reception</span>
       </div>
     </div>
-
+ 
     <div class="skill-group">
-      <div class="skill-group-label">Frameworks & Tools</div>
+      <div class="skill-group-label">Tools & Docs</div>
       <div class="skill-tags">
         <span class="skill-tag">Git</span>
         <span class="skill-tag">LaTeX</span>
+        <span class="skill-tag">Excel</span>
         <span class="skill-tag">GitHub Pages</span>
         <span class="skill-tag">SDR++</span>
-        <span class="skill-tag">SatDump</span>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header">
-    <span class="section-index">05</span>
+    <span class="section-index">06</span>
     <h2>Contact</h2>
     <div class="section-line"></div>
   </div>
@@ -924,30 +1314,31 @@
       reach out for collaborations, research discussions, or engineering opportunities.
     </div>
     <div class="contact-links">
-      <a href="mailto:horipapa0613@gmail.com" class="contact-link"><!-- Replace with your email -->
+      <a href="mailto:horipapa0613@gmail.com" class="contact-link">
         <span class="contact-link-label">Email</span>
         <span class="contact-link-value">horipapa0613@gmail.com</span>
       </a>
-      <a href="https://linkedin.com/in/YOUR-HANDLE" class="contact-link" target="_blank">
+      <a href="https://linkedin.com/in/kai-hori" class="contact-link" target="_blank" rel="noopener">
         <span class="contact-link-label">LinkedIn</span>
-        <span class="contact-link-value">Add LinkedIn URL</span>
+        <span class="contact-link-value">linkedin.com/in/kai-hori</span>
       </a>
-      <a href="https://github.com/kaihori613" class="contact-link" target="_blank">
+      <a href="https://github.com/kaihori613" class="contact-link" target="_blank" rel="noopener">
         <span class="contact-link-label">GitHub</span>
         <span class="contact-link-value">github.com/kaihori613</span>
       </a>
-      <a href="Kaitaro_Hori_Resume.pdf" class="contact-link" target="_blank"><!-- Add your resume PDF to the repo -->
+      <a href="Kaitaro_Hori_Resume.pdf" class="contact-link" target="_blank" rel="noopener">
         <span class="contact-link-label">Resume</span>
         <span class="contact-link-value">Download PDF ↗</span>
       </a>
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <p>© 2026 Kai Hori</p>
   <p>Built with GitHub Pages</p>
 </footer>
-
+ 
 </body>
 </html>
+ 
