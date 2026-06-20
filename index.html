@@ -3,7 +3,7 @@
   File layout expected by this page:
   /index.html
   /Kaitaro_Hori_Resume.pdf
-  /assets/                 all images and non-resume PDFs
+  /assets/                 all images and non-resume PDFs, including EAE_129_Final_Project.pdf
 -->
 <html lang="en">
 <head>
@@ -1001,25 +1001,26 @@
               The first field tests used a simple dipole antenna and manual tracking. It proved the
               satellites were receivable, but the pointing precision was unforgiving. That pushed us to
               build a quadrifilar helical antenna tuned for the 137 MHz Meteor downlink using lab tools,
-              3D-printed parts, drilling, and hands-on fabrication.
+              3D-printed parts, drilling, welding, and hands-on fabrication.
             </p>
             <span class="story-outcome">Problem: reception was possible, but not robust</span>
           </div>
         </article>
 
         <article class="story-card">
-          <a href="assets/qhf.jpg" target="_blank" rel="noopener">
-            <img src="assets/qhf.jpg" alt="QFH antenna deployed in the field outside the lab" loading="lazy">
+          <a href="assets/image2.jpg" target="_blank" rel="noopener">
+            <img src="assets/image2.jpg" alt="QFH antenna deployed in an open field for testing" loading="lazy">
           </a>
           <div class="story-copy">
-            <div class="story-step">02 · First field deployment</div>
-            <h4>The antenna looked right, but the waterfall did not.</h4>
+            <div class="story-step">02 · Choosing the test environment</div>
+            <h4>The open field became part of the experiment.</h4>
             <p>
-              We took the new QFH outside expecting an omnidirectional antenna to make reception easier.
-              Instead, the SDR# waterfall was weak and inconsistent. The lesson was that “omnidirectional”
-              did not mean immune to losses, reflections, cable setup, or a marginal signal chain.
+              We brought the QFH to a flat field outside the lab because it gave us the cleanest RF
+              environment we could find: fewer nearby objects, fewer reflections, and less interference.
+              That mattered more than we expected. The field setup taught us that even an omnidirectional
+              antenna still depends on a quiet environment if the signal is faint.
             </p>
-            <span class="story-outcome">Result: no clean downlink yet</span>
+            <span class="story-outcome">Lesson: a flat, low-clutter site helps faint LEO reception</span>
           </div>
         </article>
 
@@ -1031,9 +1032,10 @@
             <div class="story-step">03 · Debugging the blackout</div>
             <h4>Small geometry changes made a big RF difference.</h4>
             <p>
-              After repeated signal dropouts, we raised the QFH by about two feet so the antenna center
-              would sit in a better position relative to the ground-reflected signal. We also increased
-              receiver gain because the LEO downlink was extremely faint by the time it reached the ground.
+              At first, the new antenna still did not give us a strong waterfall. After repeated signal
+              dropouts, we raised the QFH by about two feet so the antenna center would sit in a better
+              position relative to the ground-reflected signal. We also increased receiver gain because
+              the LEO downlink was extremely faint by the time it reached the ground.
             </p>
             <span class="story-outcome">Fix: raise antenna height + increase gain</span>
           </div>
@@ -1062,45 +1064,94 @@
           </a>
           <div class="story-copy">
             <div class="story-step">05 · Image recovery</div>
-            <h4>The reward was not the photo — it was the full chain working.</h4>
+            <h4>The reward was not the picture — it was the full chain working.</h4>
             <p>
               A successful pass meant the antenna, LNA/SDR chain, tracking workflow, demodulation,
               decoding, and image processing were all working together. The decoded Meteor image became
-              evidence that the ground-station workflow could produce real satellite data, not just RF noise.
+              proof that the ground-station workflow could produce real satellite data, not just RF noise.
             </p>
             <span class="story-outcome">Output: decoded LEO weather imagery</span>
           </div>
         </article>
 
         <article class="story-card">
-          <a href="assets/msu_mr_rgb_MSA-rectified.jpg" target="_blank" rel="noopener">
-            <img src="assets/msu_mr_rgb_MSA-rectified.jpg" alt="Rectified MSU-MR image with black signal-loss bands" loading="lazy">
+          <a href="assets/perfect_pass_false_color.png" target="_blank" rel="noopener">
+            <img src="assets/perfect_pass_false_color.png" alt="False-color image product from the successful Meteor pass" loading="lazy">
           </a>
           <div class="story-copy">
-            <div class="story-step">06 · What the artifacts taught us</div>
-            <h4>The black bands became a diagnostic tool.</h4>
+            <div class="story-step">06 · Perfect pass result #1</div>
+            <h4>A clean daytime swath showed what the QFH was built for.</h4>
             <p>
-              Some passes produced grainy imagery or black bands, which pointed back to momentary signal
-              loss, low-light conditions, vibration, and orientation sensitivity. Instead of treating these
-              as failed pictures, we used them as clues for the next hardware and mounting iteration.
+              This false-color product from the perfect pass made the payoff visible: clouds, land, and
+              surface features came through clearly across a wide swath. It was the first time the receive
+              chain felt reliable instead of lucky.
             </p>
-            <span class="story-outcome">Lesson: every dropout explained something</span>
+            <span class="story-outcome">Result: strong daytime image product from Meteor</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/perfect_pass_rectified.png" target="_blank" rel="noopener">
+            <img src="assets/perfect_pass_rectified.png" alt="Rectified Meteor pass with coastlines from the successful QFH reception" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">07 · Perfect pass result #2</div>
+            <h4>The rectified image let us verify more than just aesthetics.</h4>
+            <p>
+              Once the pass was rectified and overlaid with coastlines, we could confirm that the signal,
+              timing, and decode pipeline were behaving properly. It turned the result from “nice picture”
+              into evidence that the receive and processing workflow was technically sound.
+            </p>
+            <span class="story-outcome">Check: decode and map alignment made sense</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/perfect_pass_global_map.png" target="_blank" rel="noopener">
+            <img src="assets/perfect_pass_global_map.png" alt="Global map showing the footprint of the successful Meteor pass" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">08 · Perfect pass result #3</div>
+            <h4>The global map showed where the pass sat in the bigger picture.</h4>
+            <p>
+              Seeing the swath projected onto a world map helped connect the received image to the actual
+              orbital geometry. It made the project feel less like a lab exercise and more like a real
+              ground station participating in an Earth-observation workflow.
+            </p>
+            <span class="story-outcome">Context: one clean pass became a mapped observation</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/msu_mr_rgb_MSA_corrected_map.png" target="_blank" rel="noopener">
+            <img src="assets/msu_mr_rgb_MSA_corrected_map.png" alt="Grainy nighttime Meteor pass with heavy noise and black bands" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">09 · What the grainy night pass taught us</div>
+            <h4>Not every bad image meant bad hardware.</h4>
+            <p>
+              One of the grainiest runs came from a nighttime test. That pass taught us two things: first,
+              Meteor imagery is most rewarding during daylight passes, and second, image artifacts are not
+              just failures — they are diagnostics. The noisy result reinforced how much the receive chain
+              benefits from a flat environment with as few obstructions and RF interferers as possible.
+            </p>
+            <span class="story-outcome">Lesson: daylight matters, and environment matters too</span>
           </div>
         </article>
 
         <article class="story-card wide">
-          <a href="assets/msu_mr_rgb_MSA_corrected_map.png" target="_blank" rel="noopener">
-            <img src="assets/msu_mr_rgb_MSA_corrected_map.png" alt="Corrected Meteor MSU-MR map with visible signal-loss artifacts" loading="lazy">
+          <a href="assets/msu_mr_rgb_MSA-rectified.jpg" target="_blank" rel="noopener">
+            <img src="assets/msu_mr_rgb_MSA-rectified.jpg" alt="Meteor image with black signal-loss bands used to diagnose later reception issues" loading="lazy">
           </a>
           <div class="story-copy">
-            <div class="story-step">07 · Current challenge: rooftop reception</div>
+            <div class="story-step">10 · Current challenge: rooftop reception</div>
             <h4>The rooftop should have been better — instead it gave 0 SNR.</h4>
             <p>
               The next step was mounting the QFH on the lab rooftop, but the RF environment changed
-              completely. The roof is surrounded by metal HVAC structures and a nearby Wi-Fi tower; on an
-              roughly 80° pass, the system still reported 0 SNR. Our working hypothesis is that strong
-              nearby signals and multipath reflections are overwhelming the receiver. We are now checking
-              the antenna response with a VNA and planning a 137 MHz bandpass filter before moving toward
+              completely. The roof is surrounded by metal HVAC structures and a nearby Wi-Fi tower; on a
+              high-elevation pass, the system still reported 0 SNR. Our working hypothesis is that strong
+              nearby signals and multipath reflections are overwhelming the receiver, so we are now using
+              a VNA to study antenna response and planning a 137 MHz bandpass filter before moving toward
               GEO reception.
             </p>
             <span class="story-outcome">Next: VNA testing + 137 MHz filtering, then GEO</span>
@@ -1180,7 +1231,7 @@
         <span class="tool-badge">Flying Qualities</span>
       </div>
       <div class="project-docs">
-        <a href="assets/EAE_129_Final_Project.pdf" class="doc-link" target="_blank" rel="noopener">Response Sim</a>
+        <a href="assets/EAE_129_Final_Project.pdf" data-fallbacks="assets/EAE%20129%20Final%20Project.pdf,EAE_129_Final_Project.pdf,EAE%20129%20Final%20Project.pdf" class="doc-link smart-pdf-link" target="_blank" rel="noopener">Response Sim</a>
         <a href="assets/EAE_129_Midterm_Project.pdf" class="doc-link" target="_blank" rel="noopener">Wind-Tunnel</a>
       </div>
     </div>
@@ -1486,6 +1537,46 @@
   <p>© 2026 Kai Hori</p>
   <p>Built with GitHub Pages</p>
 </footer>
+
+<script>
+  // PDF link fallback for deployment filename mismatches.
+  // Primary layout: index.html + resume in root, all other PDFs/images in assets/.
+  // If a renamed PDF returns 404, try the alternate filenames listed in data-fallbacks.
+  async function fileExists(url) {
+    try {
+      const response = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+      if (response.ok) return true;
+      // Some static hosts do not allow HEAD; fall back to a tiny GET check.
+      if (response.status === 405) {
+        const getResponse = await fetch(url, { method: 'GET', cache: 'no-store' });
+        return getResponse.ok;
+      }
+      return false;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  document.querySelectorAll('a.smart-pdf-link[data-fallbacks]').forEach((link) => {
+    link.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const candidates = [link.getAttribute('href'), ...link.dataset.fallbacks.split(',')].filter(Boolean);
+      const popup = window.open('', '_blank', 'noopener');
+
+      for (const candidate of candidates) {
+        if (await fileExists(candidate)) {
+          if (popup) popup.location.href = candidate;
+          else window.location.href = candidate;
+          return;
+        }
+      }
+
+      const attempted = candidates.map((candidate) => `• ${candidate}`).join('\n');
+      if (popup) popup.close();
+      alert(`Could not find the Response Sim PDF. Checked:\n${attempted}\n\nMake sure the file exists in assets/ with exactly this capitalization.`);
+    });
+  });
+</script>
 
 </body>
 </html>
