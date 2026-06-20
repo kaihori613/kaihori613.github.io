@@ -1,235 +1,3 @@
-
-/
-Claude finished the response
-
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Kai Hori — Aerospace & Mechanical Engineering</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2
-
-pasted
-
-can you edit the porfolio to include the files i have attached?
-
-4:23 PM
-
-Strategized integrating attached project files into portfolio
-Strategized integrating attached project files into portfolio
-I'll help you incorporate your attached files into the portfolio. First, let me read through them to understand the projects so I can represent them accurately. Let me start by checking the relevant skills and then reviewing your files.
-
-
-Inventoried attached files to integrate into portfolio
-Inventoried attached files to integrate into portfolio
-Now let me get a quick inventory of all your project files so I understand what I'm working with.
-
-
-Deciphering specialized bundle format and examining manifest
-Deciphering specialized bundle format and examining manifest
-The files aren't standard PDFs — most are ZIP archives and one is plain text. Let me look inside to understand their actual structure.
-
-
-Parsing ODIN mission documentation and reviewing attachments
-Parsing ODIN mission documentation and reviewing attachments
-These are pre-processed bundles — each "PDF" is a ZIP containing page images (JPEG), extracted text (TXT), and a manifest. Let me extract and read them all so I understand your projects.
-
-
-Skimming resume and project files for portfolio integration
-Skimming resume and project files for portfolio integration
-Excellent — the ODIN CDR is comprehensive. Now let me read the text content from all the other bundles.
-
-
-Cataloging project files and design portfolio components
-Cataloging project files and design portfolio components
-Now let me read the opening pages of each coursework project to understand what they cover.
-
-
-Reconciled multiple project versions and identified Kai's role assignments
-Reconciled multiple project versions and identified Kai's role assignments
-Let me read the opening of your detailed communications subsystem report and check the two images.
-
-
-Examined attached files to understand portfolio modifications
-Examined attached files to understand portfolio modifications
-Now let me look at the two images so I can use them in the portfolio.
-
-
-Preserving existing design aesthetic while extending it consistently
-Preserving existing design aesthetic while extending it consistently
-Both images are real captures from your ground-station work — the QFH antenna in the field and a Meteor-M2 weather pass over the US West Coast. I now have everything I need. Let me quickly check the frontend design skill before rebuilding the page so the additions match the existing aesthetic.
-
-
-Deliberating file naming conventions and presentation strategy
-Deliberating file naming conventions and presentation strategy
-I've now read all 15 files. Here's what I found and how I'll incorporate them:
-
-ODIN is your flagship capstone (inspecting ESA's Solar Orbiter, heliocentric, X-band comms) — covered by the CDR, your 74-page Communications/C&DH subsystem report, and the showcase posters.
-Coursework/reports: supersonic wedge shock analysis (EAE 198), aircraft dynamics & stability (EAE 129), truss-braced wing flutter (EME 139), wing structural analysis (EAE 135), pressure vessel design (EME 150A), and applied aerodynamics (EAE 127).
-Two images: your QFH antenna in the field + a Meteor-M2 weather capture over the US West Coast — real proof of the MOON ground-station work.
-Your resume adds detail I'll fold in (dual B.S. Aero + Mech, 3.61 GPA, NeuralX & CFPA labs, bilingual JP/EN, the CPOD→ISS redesign capstone).
-Let me build the updated portfolio, keeping your exact dark/amber aesthetic and wiring every file in as a real downloadable link.
-
-
-Strategized file placement and portfolio integration approach
-Strategized file placement and portfolio integration approach
-Done. Every one of your 15 files is now wired into the page as a real link, keeping your dark/amber aesthetic intact.
-
-What changed:
-
-Projects now has seven cards. Three cover ODIN (the CDR, your 74-page comms/C&DH subsystem report, and the showcase posters), plus the NeuralX SPH sim, the EAE 198 supersonic wedge study, and a combined EAE 129 dynamics/stability card linking both reports. The MOON ground station is a full-width featured card showing your QFH antenna photo and the decoded Meteor-M2 capture side by side.
-A new Technical Reports & Coursework section (03) lists the remaining six as a clean download list: EME 139 flutter, EAE 135 structures (×2), EME 150A pressure vessel, and EAE 127 aero (×2).
-About, Experience, and Skills are updated from your resume — dual B.S. + 3.61 GPA, bilingual JP/EN, the CPOD→ISS redesign capstone, NeuralX and the Aeroacoustics lab, and your actual toolset (FreeFlyer, ANSYS, NASTRAN/PATRAN, Fortran, milling/CNC, etc.).
-One thing you need to do: drop all the PDFs and both images (qhf.jpg, Meteor_m2_4.jpg) into the same folder as index.html in your repo, with these exact filenames. The links are relative, so the page expects them right alongside it — same pattern your resume link already used.
-
-Two small calls I made: I filled the empty LinkedIn placeholder with linkedin.com/in/kai-hori from your resume, and left your Gmail as-is since you'd set it deliberately (your resume lists khori@ucdavis.edu if you'd rather use that instead).
-
-
-Index
-Code · HTML 
-how do i check if it looks good on github
-
-4:39 PM
-
-Architected local and GitHub Pages preview workflow with gotcha warnings
-Architected local and GitHub Pages preview workflow with gotcha warnings
-Two ways, fastest first.
-
-Preview locally (instant, no commit needed). Put index.html and all the PDFs/images in one folder and double-click index.html — it opens in your browser, and because the links are relative, the images and PDFs load fine as long as they're sitting in that same folder. That's the quickest way to iterate before pushing anything. If you want it to behave exactly like GitHub Pages, open a terminal in that folder and run python3 -m http.server, then visit http://localhost:8000.
-
-View it on the real GitHub Pages site.
-
-Commit and push index.html plus all your project files to the repo (the repo root is simplest).
-In the repo, go to Settings → Pages. Under "Build and deployment," set Source to Deploy from a branch, pick your branch (main) and /(root), and Save.
-Give it about a minute, then refresh — the live URL shows up at the top of that page. It'll be either https://kaihori613.github.io/ (if the repo is named kaihori613.github.io) or https://kaihori613.github.io/<repo-name>/.
-One gotcha worth knowing: clicking index.html inside the repo's file list shows the source code, not the rendered page. Only the Pages URL (or your local preview) actually renders it.
-
-Once it's live, check these specifically:
-
-The two MOON images load. If they show as broken, it's almost always a filename mismatch — GitHub Pages is case-sensitive, so qhf.jpg and Meteor_m2_4.jpg have to match exactly, capitalization and all.
-Every "PDF ↗" link and the resume link open the right document.
-Mobile layout — open DevTools (F12, or right-click → Inspect) and click the device-toolbar icon to simulate a phone. The page is built to collapse to a single column, and the MOON card stacks its images above the text.
-If something looks off once you've got it up, tell me what and I'll fix it.
-
-image2.jpg
-image3.jpg
-IMG_6912.jpeg
-image_2.jpg
-image.jpg
-msu_mr_rgb_MSA_corrected_map.png
-msu_mr_rgb_MCIR-rectified.jpg
-msu_mr_rgb_MSA-rectified.jpg
-
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Kai Hori — Aerospace & Mechanical Engineering</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2
-
-pasted
-
-https://github.com/kaihori613/kaihori613.github.io/tree/main/assets
-
-5:11 PM
-
-Strategized integrating satellite imagery into portfolio gallery
-Strategized integrating satellite imagery into portfolio gallery
-Good — these are excellent additions: action shots of the ground station (day and night), the live SatDump decode, and several Meteor-M2 captures. And the assets/ folder URL tells me you're organizing images there. Let me check what's actually in your repo so I reference the right paths, then verify the new files.
-
-
-Grappling with unknown assets folder contents
-Grappling with unknown assets folder contents
-The GitHub API is rate-limited on this shared IP. Let me read the folder page you linked directly instead.
-
-
-Cataloging repository assets and verifying file locations
-Cataloging repository assets and verifying file locations
-github.com blocks automated fetches, but the raw file host doesn't. Let me probe which files actually exist and where, so the paths in your HTML are correct.
-
-
-Verifying image mappings and confirming SatDump decode screenshot
-Verifying image mappings and confirming SatDump decode screenshot
-That's the key finding: your qhf.jpg and Meteor_m2_4.jpg are already in assets/, but the live index.html still points to them in the root — so those images are currently broken on the site. The new images and the project PDFs (except your resume) aren't uploaded yet. I'll fix the paths and wire in the new shots. Let me confirm one filename mapping first.
-
-
-Deliberating between file deletion and recreation strategies
-Deliberating between file deletion and recreation strategies
-Confirmed — image3.jpg is your live SatDump decode (QPSK constellation locked, CCSDS/Viterbi synced). The upload order matches, so I have all eight mapped:
-
-Field/work shots: antenna deploy, operating mid-pass, timing the pass, a night session, and the SatDump decode screen
-Decoded results: three Meteor-M2 MSU-MR captures (your original plus the MCIR and natural-color rectified composites)
-I'll rebuild the MOON project as a full-width gallery that tells the deploy → track → decode → result story, fix the broken assets/ paths, and point the new images there. Let me write it.
-
-
-Reconsidering file creation strategy and composing content
-Reconsidering file creation strategy and composing content
-The previous version is still on disk. Let me replace it with the updated file.
-
-
-Verifying file integrity and asset references
-Verifying file integrity and asset references
-It looks like the same set came through again — and the version shown is still the old two-image layout. I already built the updated gallery version last turn; let me confirm it's intact and then hand it over properly with the upload steps, since I didn't get those to you.
-
-
-Orchestrated deployment checklist with structured formatting
-Orchestrated deployment checklist with structured formatting
-Done — here's the updated index.html. The MOON ground station is now a full-width gallery that runs deploy → track → decode → result, pulling in your field shots, the live SatDump decode, and the Meteor-M2 captures.
-
-The important fix: your old index.html pointed at qhf.jpg and Meteor_m2_4.jpg in the repo root, but those files actually live in assets/ — so both images were broken on the live site. Every image now correctly points to assets/.
-
-To make the live site match this file, you need to do three things in your repo:
-
-1. Replace index.html in the root with this new one.
-
-2. Upload the new images to assets/ (these 6, exact names — capitalization matters):
-
-image.jpg, image_2.jpg, image3.jpg, IMG_6912.jpeg, msu_mr_rgb_MCIR-rectified.jpg, msu_mr_rgb_MSA-rectified.jpg
-(qhf.jpg and Meteor_m2_4.jpg are already there, so the gallery's other two slots will work once the HTML is updated.)
-
-3. Upload the project PDFs to the root — right now only your résumé is uploaded, so every other "PDF ↗" link is currently a 404. You still need: ODIN_CDR.pdf, ODIN_COMMUNICATIONS_SUBSYSTEM.pdf, Design_Showcase_Posters.pdf, EAE198_project.pdf, EAE_129_Final_Project.pdf, EAE_129_Midterm_Project.pdf, EME_139_Team_Term_Paper_Final_Report.pdf, EAE_135_Project_2.pdf, EAE_135_Project_3.pdf, EME150_Project.pdf, EAE127HW6.pdf, EAE127HW7.pdf.
-
-Two images I left out of the gallery: image2.jpg (it's nearly identical to qhf.jpg) and msu_mr_rgb_MSA_corrected_map.png (it's the noisy raw pass — looks rougher next to the clean rectified ones). Say the word if you'd rather swap either in. Each gallery thumbnail is also clickable, opening the full-resolution image in a new tab.
-
-
-Index
-Code · HTML 
-image2.jpg
-image3.jpg
-IMG_6912.jpeg
-image_2.jpg
-image.jpg
-msu_mr_rgb_MSA_corrected_map.png
-msu_mr_rgb_MCIR-rectified.jpg
-msu_mr_rgb_MSA-rectified.jpg
-
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Kai Hori — Aerospace & Mechanical Engineering</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2
-
-pasted
-
-https://github.com/kaihori613/kaihori613.github.io/tree/main/assets
-
-5:33 PM
-
-Reconsidering conciseness while anticipating user needs
-Reconsidering conciseness while anticipating user needs
-The file I sent is ready and unchanged — the version showing up attached here is your current repo copy (still the old two-image layout), not the updated one. Here's the finished file again so you have it:
-
-
-Deliberated concise guidance and repository upload mechanics
-Deliberated concise guidance and repository upload mechanics
-Once you download it, here's all that's left to do in your repo (drag-and-drop on github.com works fine for each):
-
-Replace index.html in the root with this file.
-Drop these 6 images into the assets/ folder — exact names: image.jpg, image_2.jpg, image3.jpg, IMG_6912.jpeg, msu_mr_rgb_MCIR-rectified.jpg, msu_mr_rgb_MSA-rectified.jpg. (qhf.jpg and Meteor_m2_4.jpg are already there.)
-Add the project PDFs to the root so the "PDF ↗" links resolve — currently only your résumé is uploaded.
-Once those three are done, the gallery and every document link will work on the live site. If something looks off after you push, tell me what and I'll sort it.
-
-
-Index
-Code · HTML 
-
-You've used 90% of your session limit
-Get more usage
-
-
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -240,7 +8,7 @@ Index · HTML
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
   :root {
     --bg: #080b10;
     --bg2: #0d1117;
@@ -255,9 +23,9 @@ Index · HTML
     --mono: 'Space Mono', monospace;
     --display: 'Syne', sans-serif;
   }
- 
+
   html { scroll-behavior: smooth; }
- 
+
   body {
     font-family: var(--display);
     background: var(--bg);
@@ -265,7 +33,7 @@ Index · HTML
     line-height: 1.6;
     overflow-x: hidden;
   }
- 
+
   /* Grid background */
   body::before {
     content: '';
@@ -278,7 +46,7 @@ Index · HTML
     pointer-events: none;
     z-index: 0;
   }
- 
+
   /* NAV */
   nav {
     position: fixed;
@@ -292,20 +60,20 @@ Index · HTML
     background: rgba(8,11,16,0.85);
     backdrop-filter: blur(12px);
   }
- 
+
   .nav-logo {
     font-family: var(--mono);
     font-size: 13px;
     color: var(--amber);
     letter-spacing: 0.1em;
   }
- 
+
   .nav-links {
     display: flex;
     gap: 2.2rem;
     list-style: none;
   }
- 
+
   .nav-links a {
     font-family: var(--mono);
     font-size: 11px;
@@ -315,9 +83,9 @@ Index · HTML
     text-transform: uppercase;
     transition: color 0.2s;
   }
- 
+
   .nav-links a:hover { color: var(--amber); }
- 
+
   /* SECTIONS */
   section {
     position: relative;
@@ -326,7 +94,7 @@ Index · HTML
     margin: 0 auto;
     padding: 6rem 3rem;
   }
- 
+
   /* HERO */
   #hero {
     min-height: 100vh;
@@ -336,7 +104,7 @@ Index · HTML
     padding-top: 8rem;
     max-width: 1100px;
   }
- 
+
   .hero-label {
     font-family: var(--mono);
     font-size: 11px;
@@ -348,7 +116,7 @@ Index · HTML
     align-items: center;
     gap: 0.75rem;
   }
- 
+
   .hero-label::before {
     content: '';
     display: block;
@@ -356,7 +124,7 @@ Index · HTML
     height: 1px;
     background: var(--amber);
   }
- 
+
   h1 {
     font-size: clamp(3.5rem, 8vw, 7rem);
     font-weight: 800;
@@ -365,7 +133,7 @@ Index · HTML
     margin-bottom: 1.5rem;
     color: var(--text);
   }
- 
+
   .hero-tagline {
     font-size: 1.1rem;
     color: var(--text-muted);
@@ -374,13 +142,13 @@ Index · HTML
     margin-bottom: 3rem;
     font-weight: 400;
   }
- 
+
   .hero-ctas {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
   }
- 
+
   .btn-primary {
     padding: 0.75rem 2rem;
     background: var(--amber);
@@ -395,9 +163,9 @@ Index · HTML
     cursor: pointer;
     transition: opacity 0.2s;
   }
- 
+
   .btn-primary:hover { opacity: 0.85; }
- 
+
   .btn-ghost {
     padding: 0.75rem 2rem;
     background: transparent;
@@ -410,9 +178,9 @@ Index · HTML
     border: 1px solid var(--border);
     transition: border-color 0.2s, color 0.2s;
   }
- 
+
   .btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
- 
+
   .hero-stats {
     display: flex;
     gap: 3rem;
@@ -420,7 +188,7 @@ Index · HTML
     padding-top: 3rem;
     border-top: 1px solid var(--border);
   }
- 
+
   .stat-num {
     font-family: var(--mono);
     font-size: 2rem;
@@ -428,13 +196,13 @@ Index · HTML
     font-weight: 700;
     line-height: 1;
   }
- 
+
   .stat-label {
     font-size: 12px;
     color: var(--text-muted);
     margin-top: 0.4rem;
   }
- 
+
   /* SECTION HEADER */
   .section-header {
     display: flex;
@@ -442,27 +210,27 @@ Index · HTML
     gap: 1rem;
     margin-bottom: 3.5rem;
   }
- 
+
   .section-index {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--amber);
     letter-spacing: 0.2em;
   }
- 
+
   h2 {
     font-size: 2.2rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--text);
   }
- 
+
   .section-line {
     flex: 1;
     height: 1px;
     background: var(--border);
   }
- 
+
   /* ABOUT */
   .about-grid {
     display: grid;
@@ -470,23 +238,23 @@ Index · HTML
     gap: 4rem;
     align-items: start;
   }
- 
+
   .about-bio {
     font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.85;
   }
- 
+
   .about-bio p + p { margin-top: 1.2rem; }
- 
+
   .about-bio strong { color: var(--text); font-weight: 600; }
- 
+
   .about-details {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
   }
- 
+
   .detail-item {
     display: flex;
     flex-direction: column;
@@ -495,7 +263,7 @@ Index · HTML
     border: 1px solid var(--border);
     background: var(--bg2);
   }
- 
+
   .detail-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -503,12 +271,12 @@ Index · HTML
     letter-spacing: 0.2em;
     text-transform: uppercase;
   }
- 
+
   .detail-value {
     font-size: 14px;
     color: var(--text);
   }
- 
+
   /* PROJECTS */
   .projects-grid {
     display: grid;
@@ -516,7 +284,7 @@ Index · HTML
     gap: 1.5px;
     background: var(--border);
   }
- 
+
   .project-card {
     background: var(--bg2);
     padding: 2rem;
@@ -524,7 +292,7 @@ Index · HTML
     position: relative;
     overflow: hidden;
   }
- 
+
   .project-card::before {
     content: '';
     position: absolute;
@@ -535,9 +303,9 @@ Index · HTML
     transform-origin: left;
     transition: transform 0.3s;
   }
- 
+
   .project-card:hover::before { transform: scaleX(1); }
- 
+
   .project-tag {
     font-family: var(--mono);
     font-size: 10px;
@@ -546,7 +314,7 @@ Index · HTML
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
- 
+
   .project-title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -554,20 +322,20 @@ Index · HTML
     margin-bottom: 0.75rem;
     letter-spacing: -0.01em;
   }
- 
+
   .project-desc {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 1.25rem;
   }
- 
+
   .project-tools {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
- 
+
   .tool-badge {
     font-family: var(--mono);
     font-size: 10px;
@@ -576,7 +344,7 @@ Index · HTML
     padding: 0.2rem 0.6rem;
     letter-spacing: 0.1em;
   }
- 
+
   /* Document links inside project cards */
   .project-docs {
     display: flex;
@@ -584,7 +352,7 @@ Index · HTML
     gap: 0.5rem;
     margin-top: 1.25rem;
   }
- 
+
   .doc-link {
     font-family: var(--mono);
     font-size: 10px;
@@ -599,13 +367,13 @@ Index · HTML
     align-items: center;
     gap: 0.45rem;
   }
- 
+
   .doc-link::after { content: '↗'; font-size: 11px; }
   .doc-link:hover { background: var(--amber); color: #080b10; }
- 
+
   /* Featured full-width project (MOON ground station) */
   .project-card.span-2 { grid-column: 1 / -1; }
- 
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -614,15 +382,15 @@ Index · HTML
     border: 1px solid var(--border);
     margin-top: 1.75rem;
   }
- 
+
   .gallery a {
     display: block;
     text-decoration: none;
     background: var(--bg3);
   }
- 
+
   .gallery figure { margin: 0; }
- 
+
   .gallery img {
     width: 100%;
     height: 200px;
@@ -631,9 +399,9 @@ Index · HTML
     background: var(--bg3);
     transition: opacity 0.2s;
   }
- 
+
   .gallery a:hover img { opacity: 0.82; }
- 
+
   .gallery figcaption {
     font-family: var(--mono);
     font-size: 9px;
@@ -644,14 +412,14 @@ Index · HTML
     background: var(--bg2);
     line-height: 1.4;
   }
- 
+
   /* TECHNICAL REPORTS LIST */
   .docs-list {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border);
   }
- 
+
   .docs-row {
     display: flex;
     justify-content: space-between;
@@ -662,16 +430,16 @@ Index · HTML
     border-bottom: 1px solid var(--border);
     transition: background 0.2s;
   }
- 
+
   .docs-row:last-child { border-bottom: none; }
   .docs-row:hover { background: var(--amber-dim); }
- 
+
   .docs-row-main {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
   }
- 
+
   .docs-code {
     font-family: var(--mono);
     font-size: 10px;
@@ -679,13 +447,13 @@ Index · HTML
     text-transform: uppercase;
     color: var(--amber);
   }
- 
+
   .docs-title {
     font-size: 14px;
     color: var(--text);
     line-height: 1.45;
   }
- 
+
   .docs-pdf {
     font-family: var(--mono);
     font-size: 11px;
@@ -694,16 +462,16 @@ Index · HTML
     white-space: nowrap;
     transition: color 0.2s;
   }
- 
+
   .docs-row:hover .docs-pdf { color: var(--amber); }
- 
+
   /* EXPERIENCE */
   .experience-list {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
- 
+
   .exp-item {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -711,13 +479,13 @@ Index · HTML
     border-top: 1px solid var(--border);
     padding: 2rem 0;
   }
- 
+
   .exp-item:last-child { border-bottom: 1px solid var(--border); }
- 
+
   .exp-meta {
     padding-right: 2rem;
   }
- 
+
   .exp-period {
     font-family: var(--mono);
     font-size: 11px;
@@ -725,7 +493,7 @@ Index · HTML
     letter-spacing: 0.1em;
     line-height: 1.4;
   }
- 
+
   .exp-type {
     font-family: var(--mono);
     font-size: 10px;
@@ -734,42 +502,42 @@ Index · HTML
     text-transform: uppercase;
     margin-top: 0.5rem;
   }
- 
+
   .exp-content {}
- 
+
   .exp-role {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 0.25rem;
   }
- 
+
   .exp-org {
     font-size: 13px;
     color: var(--text-muted);
     margin-bottom: 0.75rem;
   }
- 
+
   .exp-desc {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.75;
   }
- 
+
   .exp-desc ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
   }
- 
+
   .exp-desc li::before {
     content: '—';
     color: var(--amber);
     margin-right: 0.6rem;
     font-family: var(--mono);
   }
- 
+
   /* SKILLS */
   .skills-grid {
     display: grid;
@@ -777,12 +545,12 @@ Index · HTML
     gap: 1.5px;
     background: var(--border);
   }
- 
+
   .skill-group {
     background: var(--bg2);
     padding: 1.75rem;
   }
- 
+
   .skill-group-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -791,13 +559,13 @@ Index · HTML
     text-transform: uppercase;
     margin-bottom: 1.25rem;
   }
- 
+
   .skill-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
- 
+
   .skill-tag {
     font-family: var(--mono);
     font-size: 11px;
@@ -807,12 +575,12 @@ Index · HTML
     padding: 0.3rem 0.75rem;
     transition: color 0.2s, border-color 0.2s;
   }
- 
+
   .skill-tag:hover {
     color: var(--amber);
     border-color: rgba(240,160,48,0.4);
   }
- 
+
   /* CONTACT */
   .contact-inner {
     display: grid;
@@ -820,20 +588,20 @@ Index · HTML
     gap: 4rem;
     align-items: start;
   }
- 
+
   .contact-text {
     font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.8;
   }
- 
+
   .contact-links {
     display: flex;
     flex-direction: column;
     gap: 0;
     border: 1px solid var(--border);
   }
- 
+
   .contact-link {
     display: flex;
     justify-content: space-between;
@@ -843,10 +611,10 @@ Index · HTML
     border-bottom: 1px solid var(--border);
     transition: background 0.2s;
   }
- 
+
   .contact-link:last-child { border-bottom: none; }
   .contact-link:hover { background: var(--amber-dim); }
- 
+
   .contact-link-label {
     font-family: var(--mono);
     font-size: 11px;
@@ -854,12 +622,12 @@ Index · HTML
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
- 
+
   .contact-link-value {
     font-size: 13px;
     color: var(--text);
   }
- 
+
   /* FOOTER */
   footer {
     position: relative;
@@ -871,36 +639,36 @@ Index · HTML
     align-items: center;
     max-width: 100%;
   }
- 
+
   footer p {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--text-dim);
     letter-spacing: 0.1em;
   }
- 
+
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
- 
+
   .fade-up {
     opacity: 0;
     animation: fadeUp 0.7s ease forwards;
   }
- 
+
   .delay-1 { animation-delay: 0.1s; }
   .delay-2 { animation-delay: 0.2s; }
   .delay-3 { animation-delay: 0.35s; }
   .delay-4 { animation-delay: 0.5s; }
   .delay-5 { animation-delay: 0.65s; }
- 
+
   @media (prefers-reduced-motion: reduce) {
     .fade-up { animation: none; opacity: 1; }
     html { scroll-behavior: auto; }
   }
- 
+
   /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
@@ -921,7 +689,7 @@ Index · HTML
 </style>
 </head>
 <body>
- 
+
 <nav>
   <span class="nav-logo">KAI HORI</span>
   <ul class="nav-links">
@@ -933,7 +701,7 @@ Index · HTML
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-label fade-up">Aerospace & Mechanical Engineering · UC Davis</div>
@@ -962,7 +730,7 @@ Index · HTML
     </div>
   </div>
 </section>
- 
+
 <!-- ABOUT -->
 <section id="about">
   <div class="section-header">
@@ -1019,7 +787,7 @@ Index · HTML
     </div>
   </div>
 </section>
- 
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header">
@@ -1028,7 +796,7 @@ Index · HTML
     <div class="section-line"></div>
   </div>
   <div class="projects-grid">
- 
+
     <!-- ODIN MISSION -->
     <div class="project-card">
       <div class="project-tag">Spacecraft Systems · Capstone</div>
@@ -1049,7 +817,7 @@ Index · HTML
         <a href="ODIN_CDR.pdf" class="doc-link" target="_blank" rel="noopener">Critical Design Review</a>
       </div>
     </div>
- 
+
     <!-- ODIN COMMS SUBSYSTEM -->
     <div class="project-card">
       <div class="project-tag">Communications · C&amp;DH</div>
@@ -1070,7 +838,7 @@ Index · HTML
         <a href="ODIN_COMMUNICATIONS_SUBSYSTEM.pdf" class="doc-link" target="_blank" rel="noopener">Subsystem Report</a>
       </div>
     </div>
- 
+
     <!-- MOON GROUND STATION — FEATURED FULL-WIDTH GALLERY -->
     <div class="project-card span-2">
       <div class="project-tag">RF Hardware · Research</div>
@@ -1126,7 +894,7 @@ Index · HTML
         </figure></a>
       </div>
     </div>
- 
+
     <!-- ODIN POSTERS -->
     <div class="project-card">
       <div class="project-tag">Mission Design · Showcase</div>
@@ -1145,7 +913,7 @@ Index · HTML
         <a href="Design_Showcase_Posters.pdf" class="doc-link" target="_blank" rel="noopener">Poster Set</a>
       </div>
     </div>
- 
+
     <!-- SPH SIM -->
     <div class="project-card">
       <div class="project-tag">Numerical Simulation · NeuralX</div>
@@ -1162,7 +930,7 @@ Index · HTML
         <span class="tool-badge">Compute Shaders</span>
       </div>
     </div>
- 
+
     <!-- SUPERSONIC WEDGE -->
     <div class="project-card">
       <div class="project-tag">Compressible Aerodynamics</div>
@@ -1181,7 +949,7 @@ Index · HTML
         <a href="EAE198_project.pdf" class="doc-link" target="_blank" rel="noopener">Report</a>
       </div>
     </div>
- 
+
     <!-- AIRCRAFT DYNAMICS -->
     <div class="project-card">
       <div class="project-tag">Stability & Control</div>
@@ -1202,10 +970,10 @@ Index · HTML
         <a href="EAE_129_Midterm_Project.pdf" class="doc-link" target="_blank" rel="noopener">Wind-Tunnel</a>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
+
 <!-- TECHNICAL REPORTS & COURSEWORK -->
 <section id="reports">
   <div class="section-header">
@@ -1214,7 +982,7 @@ Index · HTML
     <div class="section-line"></div>
   </div>
   <div class="docs-list">
- 
+
     <a href="EME_139_Team_Term_Paper_Final_Report.pdf" class="docs-row" target="_blank" rel="noopener">
       <div class="docs-row-main">
         <span class="docs-code">EME 139 · Aeroelasticity</span>
@@ -1222,7 +990,7 @@ Index · HTML
       </div>
       <span class="docs-pdf">PDF ↗</span>
     </a>
- 
+
     <a href="EAE_135_Project_2.pdf" class="docs-row" target="_blank" rel="noopener">
       <div class="docs-row-main">
         <span class="docs-code">EAE 135 · Structures</span>
@@ -1230,7 +998,7 @@ Index · HTML
       </div>
       <span class="docs-pdf">PDF ↗</span>
     </a>
- 
+
     <a href="EAE_135_Project_3.pdf" class="docs-row" target="_blank" rel="noopener">
       <div class="docs-row-main">
         <span class="docs-code">EAE 135 · Structures</span>
@@ -1238,7 +1006,7 @@ Index · HTML
       </div>
       <span class="docs-pdf">PDF ↗</span>
     </a>
- 
+
     <a href="EME150_Project.pdf" class="docs-row" target="_blank" rel="noopener">
       <div class="docs-row-main">
         <span class="docs-code">EME 150A · Machine Design</span>
@@ -1246,7 +1014,7 @@ Index · HTML
       </div>
       <span class="docs-pdf">PDF ↗</span>
     </a>
- 
+
     <a href="EAE127HW6.pdf" class="docs-row" target="_blank" rel="noopener">
       <div class="docs-row-main">
         <span class="docs-code">EAE 127 · Applied Aerodynamics</span>
@@ -1254,7 +1022,7 @@ Index · HTML
       </div>
       <span class="docs-pdf">PDF ↗</span>
     </a>
- 
+
     <a href="EAE127HW7.pdf" class="docs-row" target="_blank" rel="noopener">
       <div class="docs-row-main">
         <span class="docs-code">EAE 127 · Applied Aerodynamics</span>
@@ -1262,10 +1030,10 @@ Index · HTML
       </div>
       <span class="docs-pdf">PDF ↗</span>
     </a>
- 
+
   </div>
 </section>
- 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header">
@@ -1274,7 +1042,7 @@ Index · HTML
     <div class="section-line"></div>
   </div>
   <div class="experience-list">
- 
+
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Apr 2026 –<br>Present</div>
@@ -1292,7 +1060,7 @@ Index · HTML
         </div>
       </div>
     </div>
- 
+
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Feb 2026 –<br>Present</div>
@@ -1310,7 +1078,7 @@ Index · HTML
         </div>
       </div>
     </div>
- 
+
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Jan 2026 –<br>Mar 2026</div>
@@ -1327,7 +1095,7 @@ Index · HTML
         </div>
       </div>
     </div>
- 
+
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Jul 2025 –<br>Sep 2025</div>
@@ -1344,7 +1112,7 @@ Index · HTML
         </div>
       </div>
     </div>
- 
+
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Dec 2024 –<br>Apr 2025</div>
@@ -1361,7 +1129,7 @@ Index · HTML
         </div>
       </div>
     </div>
- 
+
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-period">Sep 2023 –<br>Sep 2024</div>
@@ -1378,10 +1146,10 @@ Index · HTML
         </div>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header">
@@ -1390,7 +1158,7 @@ Index · HTML
     <div class="section-line"></div>
   </div>
   <div class="skills-grid">
- 
+
     <div class="skill-group">
       <div class="skill-group-label">Software & Simulation</div>
       <div class="skill-tags">
@@ -1403,7 +1171,7 @@ Index · HTML
         <span class="skill-tag">Unity</span>
       </div>
     </div>
- 
+
     <div class="skill-group">
       <div class="skill-group-label">CAD & FEA</div>
       <div class="skill-tags">
@@ -1415,7 +1183,7 @@ Index · HTML
         <span class="skill-tag">3D Printing</span>
       </div>
     </div>
- 
+
     <div class="skill-group">
       <div class="skill-group-label">Programming</div>
       <div class="skill-tags">
@@ -1426,7 +1194,7 @@ Index · HTML
         <span class="skill-tag">Fortran</span>
       </div>
     </div>
- 
+
     <div class="skill-group">
       <div class="skill-group-label">Engineering Analysis</div>
       <div class="skill-tags">
@@ -1439,7 +1207,7 @@ Index · HTML
         <span class="skill-tag">C&amp;DH</span>
       </div>
     </div>
- 
+
     <div class="skill-group">
       <div class="skill-group-label">Hardware & Lab</div>
       <div class="skill-tags">
@@ -1451,7 +1219,7 @@ Index · HTML
         <span class="skill-tag">Soldering</span>
       </div>
     </div>
- 
+
     <div class="skill-group">
       <div class="skill-group-label">Tools & Docs</div>
       <div class="skill-tags">
@@ -1462,10 +1230,10 @@ Index · HTML
         <span class="skill-tag">SDR++</span>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header">
@@ -1499,12 +1267,11 @@ Index · HTML
     </div>
   </div>
 </section>
- 
+
 <footer>
   <p>© 2026 Kai Hori</p>
   <p>Built with GitHub Pages</p>
 </footer>
- 
+
 </body>
 </html>
- 
