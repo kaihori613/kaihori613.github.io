@@ -419,6 +419,114 @@
     line-height: 1.4;
   }
 
+  /* QFH story cards */
+  .qfh-story-intro {
+    margin-top: 1.75rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background:
+      linear-gradient(135deg, rgba(240,160,48,0.08), transparent 45%),
+      var(--bg3);
+  }
+
+  .qfh-story-kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 0.65rem;
+  }
+
+  .qfh-story-intro p {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.75;
+    max-width: 880px;
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 1.75rem;
+  }
+
+  .story-card {
+    background: var(--bg2);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100%;
+  }
+
+  .story-card a {
+    display: block;
+    text-decoration: none;
+    background: var(--bg3);
+  }
+
+  .story-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    background: var(--bg3);
+    transition: opacity 0.2s;
+  }
+
+  .story-card a:hover img { opacity: 0.84; }
+
+  .story-copy {
+    padding: 1.25rem 1.35rem 1.4rem;
+  }
+
+  .story-step {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 0.55rem;
+  }
+
+  .story-copy h4 {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.6rem;
+  }
+
+  .story-copy p {
+    color: var(--text-muted);
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .story-outcome {
+    display: inline-block;
+    margin-top: 0.85rem;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid rgba(240,160,48,0.35);
+    padding: 0.25rem 0.55rem;
+    background: rgba(240,160,48,0.06);
+  }
+
+  .story-card.wide { grid-column: 1 / -1; }
+
+  .story-card.wide {
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: auto;
+  }
+
+  .story-card.wide img { height: 100%; min-height: 300px; }
+
   /* TECHNICAL REPORTS LIST */
   .docs-list {
     display: flex;
@@ -685,6 +793,9 @@
     .projects-grid { grid-template-columns: 1fr; }
     .gallery { grid-template-columns: 1fr 1fr; }
     .gallery img { height: 170px; }
+    .story-grid { grid-template-columns: 1fr; }
+    .story-card.wide { grid-column: auto; grid-template-columns: 1fr; }
+    .story-card img, .story-card.wide img { height: 210px; min-height: 0; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .exp-item { grid-template-columns: 1fr; }
     .exp-meta { padding-bottom: 0.75rem; }
@@ -845,59 +956,156 @@
       </div>
     </div>
 
-    <!-- MOON GROUND STATION — FEATURED FULL-WIDTH GALLERY -->
+    <!-- MOON GROUND STATION — FEATURED FULL-WIDTH STORY GALLERY -->
     <div class="project-card span-2">
-      <div class="project-tag">RF Hardware · Research</div>
-      <div class="project-title">MOON Ground Station — QFH Antenna &amp; SDR</div>
+      <div class="project-tag">RF Hardware · Research · Trial-and-Error Debugging</div>
+      <div class="project-title">MOON Ground Station — Building a 137 MHz QFH Antenna</div>
       <p class="project-desc">
-        Hands-on ground-station work for the HRVIP Lab's MOON concept: a hand-built quadrifilar
-        helical antenna paired with an SDR reception, tracking, and decoding pipeline for LEO
-        weather satellites. I deploy the station in the field, track Meteor-M2 passes live in
-        SatDump — locking the QPSK downlink through Viterbi and Reed-Solomon decoding — and rectify
-        the result into full MSU-MR imagery, building toward a university mission-operations facility
-        for real-time data reception and education.
+        This project was not a clean “build antenna, receive image” demo. It became an iterative RF
+        debugging process: proving the signal path with a hand-tracked dipole, fabricating a better
+        QFH antenna, fighting signal blackouts in the field, discovering how sensitive the setup was
+        to height, reflections, gain, and local interference, and then using each failed pass to decide
+        what to test next.
       </p>
       <div class="project-tools">
-        <span class="tool-badge">RTL-SDR</span>
+        <span class="tool-badge">RTL-SDR V4</span>
         <span class="tool-badge">SatDump</span>
-        <span class="tool-badge">SDR++</span>
+        <span class="tool-badge">SDR#</span>
         <span class="tool-badge">QFH Antenna</span>
+        <span class="tool-badge">137 MHz</span>
         <span class="tool-badge">QPSK / CCSDS</span>
-        <span class="tool-badge">OpenSCAD</span>
+        <span class="tool-badge">VNA</span>
+        <span class="tool-badge">3D Printing</span>
       </div>
-      <div class="gallery">
-        <a href="assets/qhf.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/qhf.jpg" alt="Quadrifilar helical antenna deployed on a tripod in a field" loading="lazy">
-          <figcaption>QFH antenna deployed</figcaption>
-        </figure></a>
-        <a href="assets/image_2.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/image_2.jpg" alt="Operating the ground station with a laptop beside the antenna" loading="lazy">
-          <figcaption>Operating mid-pass</figcaption>
-        </figure></a>
-        <a href="assets/IMG_6912.jpeg" target="_blank" rel="noopener"><figure>
-          <img src="assets/IMG_6912.jpeg" alt="Timing a satellite pass beside the deployed antenna" loading="lazy">
-          <figcaption>Timing the pass</figcaption>
-        </figure></a>
-        <a href="assets/image.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/image.jpg" alt="Tracking a satellite pass at night under field lights" loading="lazy">
-          <figcaption>Tracking after dark</figcaption>
-        </figure></a>
-        <a href="assets/image3.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/image3.jpg" alt="SatDump decoding a Meteor-M2 downlink with locked QPSK constellation and CCSDS decoder" loading="lazy">
-          <figcaption>Live decode in SatDump</figcaption>
-        </figure></a>
-        <a href="assets/Meteor_m2_4.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/Meteor_m2_4.jpg" alt="Decoded Meteor-M2 satellite image over the US West Coast" loading="lazy">
-          <figcaption>Decoded Meteor-M2 pass</figcaption>
-        </figure></a>
-        <a href="assets/msu_mr_rgb_MCIR-rectified.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/msu_mr_rgb_MCIR-rectified.jpg" alt="Rectified MSU-MR MCIR composite over the western United States" loading="lazy">
-          <figcaption>MSU-MR MCIR composite</figcaption>
-        </figure></a>
-        <a href="assets/msu_mr_rgb_MSA-rectified.jpg" target="_blank" rel="noopener"><figure>
-          <img src="assets/msu_mr_rgb_MSA-rectified.jpg" alt="Rectified MSU-MR natural-color composite over the western United States" loading="lazy">
-          <figcaption>MSU-MR natural color</figcaption>
-        </figure></a>
+
+      <div class="qfh-story-intro">
+        <div class="qfh-story-kicker">From signal blackouts to a working satellite image</div>
+        <p>
+          Meteor-M2-3 and Meteor-M2-4 downlink imagery near 137 MHz, so the goal was to build a
+          practical receiver chain that could turn a faint LEO weather-satellite pass into decoded
+          imagery. The story below shows the real engineering path: first proving reception was possible,
+          then fabricating hardware, then troubleshooting the environment until the waterfall finally
+          locked cleanly.
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <a href="assets/IMG_5963.jpeg" target="_blank" rel="noopener">
+            <img src="assets/IMG_5963.jpeg" alt="Fabricating the QFH antenna in the lab" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">01 · Fabrication</div>
+            <h4>Moving from a hand-tracked dipole to a purpose-built QFH.</h4>
+            <p>
+              The first field tests used a simple dipole antenna and manual tracking. It proved the
+              satellites were receivable, but the pointing precision was unforgiving. That pushed us to
+              build a quadrifilar helical antenna tuned for the 137 MHz Meteor downlink using lab tools,
+              3D-printed parts, drilling, and hands-on fabrication.
+            </p>
+            <span class="story-outcome">Problem: reception was possible, but not robust</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/qhf.jpg" target="_blank" rel="noopener">
+            <img src="assets/qhf.jpg" alt="QFH antenna deployed in the field outside the lab" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">02 · First field deployment</div>
+            <h4>The antenna looked right, but the waterfall did not.</h4>
+            <p>
+              We took the new QFH outside expecting an omnidirectional antenna to make reception easier.
+              Instead, the SDR# waterfall was weak and inconsistent. The lesson was that “omnidirectional”
+              did not mean immune to losses, reflections, cable setup, or a marginal signal chain.
+            </p>
+            <span class="story-outcome">Result: no clean downlink yet</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/image_2.jpg" target="_blank" rel="noopener">
+            <img src="assets/image_2.jpg" alt="Debugging the QFH antenna setup in the field with a laptop" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">03 · Debugging the blackout</div>
+            <h4>Small geometry changes made a big RF difference.</h4>
+            <p>
+              After repeated signal dropouts, we raised the QFH by about two feet so the antenna center
+              would sit in a better position relative to the ground-reflected signal. We also increased
+              receiver gain because the LEO downlink was extremely faint by the time it reached the ground.
+            </p>
+            <span class="story-outcome">Fix: raise antenna height + increase gain</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/image3.jpg" target="_blank" rel="noopener">
+            <img src="assets/image3.jpg" alt="Live satellite decoding on a laptop during a successful field pass" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">04 · Lock</div>
+            <h4>The waterfall finally turned into a usable signal.</h4>
+            <p>
+              With the antenna raised and the gain adjusted, the pass finally produced the kind of signal
+              we had been chasing. That was the turning point: the antenna was not just a physical build;
+              it was part of a full receive chain that needed the right height, gain, noise environment,
+              and pass geometry.
+            </p>
+            <span class="story-outcome">Breakthrough: clean Meteor signal acquired</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/Meteor_m2_4.jpg" target="_blank" rel="noopener">
+            <img src="assets/Meteor_m2_4.jpg" alt="Decoded Meteor-M2 satellite image after a successful QFH pass" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">05 · Image recovery</div>
+            <h4>The reward was not the photo — it was the full chain working.</h4>
+            <p>
+              A successful pass meant the antenna, LNA/SDR chain, tracking workflow, demodulation,
+              decoding, and image processing were all working together. The decoded Meteor image became
+              evidence that the ground-station workflow could produce real satellite data, not just RF noise.
+            </p>
+            <span class="story-outcome">Output: decoded LEO weather imagery</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <a href="assets/msu_mr_rgb_MSA-rectified.jpg" target="_blank" rel="noopener">
+            <img src="assets/msu_mr_rgb_MSA-rectified.jpg" alt="Rectified MSU-MR image with black signal-loss bands" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">06 · What the artifacts taught us</div>
+            <h4>The black bands became a diagnostic tool.</h4>
+            <p>
+              Some passes produced grainy imagery or black bands, which pointed back to momentary signal
+              loss, low-light conditions, vibration, and orientation sensitivity. Instead of treating these
+              as failed pictures, we used them as clues for the next hardware and mounting iteration.
+            </p>
+            <span class="story-outcome">Lesson: every dropout explained something</span>
+          </div>
+        </article>
+
+        <article class="story-card wide">
+          <a href="assets/msu_mr_rgb_MSA_corrected_map.png" target="_blank" rel="noopener">
+            <img src="assets/msu_mr_rgb_MSA_corrected_map.png" alt="Corrected Meteor MSU-MR map with visible signal-loss artifacts" loading="lazy">
+          </a>
+          <div class="story-copy">
+            <div class="story-step">07 · Current challenge: rooftop reception</div>
+            <h4>The rooftop should have been better — instead it gave 0 SNR.</h4>
+            <p>
+              The next step was mounting the QFH on the lab rooftop, but the RF environment changed
+              completely. The roof is surrounded by metal HVAC structures and a nearby Wi-Fi tower; on an
+              roughly 80° pass, the system still reported 0 SNR. Our working hypothesis is that strong
+              nearby signals and multipath reflections are overwhelming the receiver. We are now checking
+              the antenna response with a VNA and planning a 137 MHz bandpass filter before moving toward
+              GEO reception.
+            </p>
+            <span class="story-outcome">Next: VNA testing + 137 MHz filtering, then GEO</span>
+          </div>
+        </article>
       </div>
     </div>
 
