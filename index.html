@@ -4,6 +4,7 @@
   /index.html
   /Kaitaro_Hori_Resume.pdf
   /assets/                 all images and non-resume PDFs, including EAE_129_Final_Project.pdf
+  /assets/geo_dish.glb     3D CAD model (GLB) for the GEO parabolic dish viewer
 -->
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
 <title>Kai Hori — Aerospace & Mechanical Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -527,6 +529,31 @@
 
   .story-card.wide img { height: 100%; min-height: 300px; }
 
+  /* GEO parabolic dish — interactive CAD viewer */
+  .cad-viewer-wrap {
+    margin-top: 1.5px;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+  }
+
+  .cad-viewer-wrap model-viewer {
+    width: 100%;
+    height: 460px;
+    background: var(--bg3);
+    display: block;
+    --poster-color: transparent;
+  }
+
+  .cad-viewer-caption {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.7rem 0.9rem;
+    border-top: 1px solid var(--border);
+  }
+
   /* TECHNICAL REPORTS LIST */
   .docs-list {
     display: flex;
@@ -796,6 +823,7 @@
     .story-grid { grid-template-columns: 1fr; }
     .story-card.wide { grid-column: auto; grid-template-columns: 1fr; }
     .story-card img, .story-card.wide img { height: 210px; min-height: 0; }
+    .cad-viewer-wrap model-viewer { height: 340px; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .exp-item { grid-template-columns: 1fr; }
     .exp-meta { padding-bottom: 0.75rem; }
@@ -976,6 +1004,8 @@
         <span class="tool-badge">QPSK / CCSDS</span>
         <span class="tool-badge">VNA</span>
         <span class="tool-badge">3D Printing</span>
+        <span class="tool-badge">Onshape</span>
+        <span class="tool-badge">Parabolic Dish</span>
       </div>
 
       <div class="qfh-story-intro">
@@ -1157,6 +1187,35 @@
             <span class="story-outcome">Next: VNA testing + 137 MHz filtering, then GEO</span>
           </div>
         </article>
+      </div>
+
+      <!-- GEO PHASE — PARABOLIC DISH CAD (interactive 3D model) -->
+      <div class="qfh-story-intro">
+        <div class="qfh-story-kicker">Phase 2 · Designing for GEO — Parabolic Dish</div>
+        <p>
+          The QFH proved the receive chain on LEO Meteor passes, but geostationary satellites sit
+          roughly 36,000 km out and need far more gain than an omnidirectional antenna can deliver.
+          The next phase is a parabolic dish, modeled in Onshape to size reflector diameter, focal
+          length, and feed-horn placement for the gain and beamwidth the GEO link budget demands.
+          Drag the model below to inspect the assembly — rotate to orbit, scroll to zoom.
+        </p>
+      </div>
+
+      <div class="cad-viewer-wrap">
+        <model-viewer
+          src="assets/geo_dish.glb"
+          alt="Parabolic dish assembly for GEO reception — interactive 3D CAD model"
+          camera-controls
+          auto-rotate
+          rotation-per-second="18deg"
+          interaction-prompt="none"
+          shadow-intensity="1"
+          exposure="1.1"
+          touch-action="pan-y">
+        </model-viewer>
+        <div class="cad-viewer-caption">
+          Parabolic dish · Onshape → GLB · drag to rotate, scroll to zoom
+        </div>
       </div>
     </div>
 
