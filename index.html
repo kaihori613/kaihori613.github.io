@@ -13,7 +13,6 @@
 <title>Kai Hori — Aerospace & Mechanical Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -529,20 +528,28 @@
 
   .story-card.wide img { height: 100%; min-height: 300px; }
 
-  /* GEO parabolic dish — interactive CAD viewer */
+  /* GEO parabolic dish — CAD image */
   .cad-viewer-wrap {
     margin-top: 1.5px;
     border: 1px solid var(--border);
     background: var(--bg3);
   }
 
-  .cad-viewer-wrap model-viewer {
-    width: 100%;
-    height: 460px;
-    background: var(--bg3);
+  .cad-viewer-wrap a {
     display: block;
-    --poster-color: transparent;
+    text-decoration: none;
+    background: var(--bg3);
   }
+
+  .cad-viewer-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--bg3);
+    transition: opacity 0.2s;
+  }
+
+  .cad-viewer-wrap a:hover img { opacity: 0.88; }
 
   .cad-viewer-caption {
     font-family: var(--mono);
@@ -823,7 +830,6 @@
     .story-grid { grid-template-columns: 1fr; }
     .story-card.wide { grid-column: auto; grid-template-columns: 1fr; }
     .story-card img, .story-card.wide img { height: 210px; min-height: 0; }
-    .cad-viewer-wrap model-viewer { height: 340px; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .exp-item { grid-template-columns: 1fr; }
     .exp-meta { padding-bottom: 0.75rem; }
@@ -1197,24 +1203,16 @@
           roughly 36,000 km out and need far more gain than an omnidirectional antenna can deliver.
           The next phase is a parabolic dish, modeled in Onshape to size reflector diameter, focal
           length, and feed-horn placement for the gain and beamwidth the GEO link budget demands.
-          Drag the model below to inspect the assembly — rotate to orbit, scroll to zoom.
+          The CAD assembly is shown below.
         </p>
       </div>
 
       <div class="cad-viewer-wrap">
-        <model-viewer
-          src="assets/geo_dish.glb"
-          alt="Parabolic dish assembly for GEO reception — interactive 3D CAD model"
-          camera-controls
-          auto-rotate
-          rotation-per-second="18deg"
-          interaction-prompt="none"
-          shadow-intensity="1"
-          exposure="1.1"
-          touch-action="pan-y">
-        </model-viewer>
+        <a href="assets/geo_dish_cad.png" target="_blank" rel="noopener">
+          <img src="assets/geo_dish_cad.png" alt="Parabolic dish CAD assembly for GEO reception, modeled in Onshape" loading="lazy">
+        </a>
         <div class="cad-viewer-caption">
-          Parabolic dish · Onshape → GLB · drag to rotate, scroll to zoom
+          Parabolic dish · Onshape CAD · click to enlarge
         </div>
       </div>
     </div>
