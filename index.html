@@ -1238,20 +1238,49 @@
       </div>
     </div>
 
-    <!-- SPH SIM -->
+       <!-- SPH SIM -->
 <div class="project-card">
   <div class="project-tag">Numerical Simulation · NeuralX</div>
-  <div class="project-title">SPH Fluid Simulation</div>
+  <div class="project-title">GPU SPH Fluid Simulation</div>
   <p class="project-desc">
-    Real-time Smoothed Particle Hydrodynamics simulation built during a research internship at
-    NeuralX. Implemented particle-based density, pressure, viscosity, and interaction models on
-    GPU compute shaders, then profiled and optimized the pipeline for interactive fluid behavior.
+    Real-time weakly compressible Smoothed Particle Hydrodynamics simulation built during a
+    research internship at NeuralX. Developed a Unity compute-shader pipeline for water-like
+    particle motion, including density estimation, pressure solving, viscosity, boundary collision,
+    XSPH smoothing, vorticity confinement, and surface-tension behavior.
   </p>
+
   <div class="project-tools">
     <span class="tool-badge">Unity</span>
     <span class="tool-badge">C#</span>
     <span class="tool-badge">HLSL</span>
     <span class="tool-badge">Compute Shaders</span>
+    <span class="tool-badge">WCSPH</span>
+    <span class="tool-badge">Tait EOS</span>
+    <span class="tool-badge">Spatial Hashing</span>
+    <span class="tool-badge">Raymarching</span>
+  </div>
+
+  <div class="qfh-story-intro">
+    <div class="qfh-story-kicker">Solver pipeline</div>
+    <p>
+      The strongest version of the simulation used a force-based WCSPH approach rather than the
+      earlier relaxation-based experiments. Particles were organized with a GPU spatial grid using
+      sorted cell keys, cell-start/cell-end buffers, and local neighbor lookup. Each frame computed
+      density from nearby particles, evaluated pressure using a Tait equation of state, applied
+      pressure and viscosity forces, then advanced particle positions through the compute-shader
+      integration pipeline.
+    </p>
+  </div>
+
+  <div class="qfh-story-intro">
+    <div class="qfh-story-kicker">Stability and visual behavior</div>
+    <p>
+      A major part of the work was debugging simulation stability: tuning smoothing radius,
+      timestep size, pressure stiffness, damping, boundary response, and collision behavior until
+      the fluid moved naturally without exploding numerically. XSPH velocity smoothing helped reduce
+      particle noise, while vorticity confinement and surface-tension terms improved the water-like
+      motion and surface cohesion.
+    </p>
   </div>
 
   <div class="cad-viewer-wrap">
@@ -1259,7 +1288,9 @@
       <source src="assets/sph_fluid_render.mp4" type="video/mp4">
       Your browser does not support embedded video.
     </video>
-    <div class="cad-viewer-caption">Raymarched fluid surface · real-time render</div>
+    <div class="cad-viewer-caption">
+      Raymarched fluid surface · GPU particle simulation rendered as a continuous fluid volume
+    </div>
   </div>
 
   <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
@@ -1267,7 +1298,9 @@
       <source src="assets/sph_particle_collision.mp4" type="video/mp4">
       Your browser does not support embedded video.
     </video>
-    <div class="cad-viewer-caption">Particle-level collision test · scene view</div>
+    <div class="cad-viewer-caption">
+      Particle-level collision test · debugging boundary response and particle stability
+    </div>
   </div>
 </div>
 
