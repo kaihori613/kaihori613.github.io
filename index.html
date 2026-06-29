@@ -1340,7 +1340,11 @@
   </div>
 
   <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
-<pre style="margin:0;padding:1.2rem;overflow:auto;background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified Unity C# solver loop
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 1.1rem;font-family:var(--mono);font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);">
+        Unity C# manager · high-level GPU solver dispatch order
+      </summary>
+      <pre style="margin:0;padding:1.2rem;overflow:auto;border-top:1px solid var(--border);background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified Unity C# solver loop
 void FixedUpdate()
 {
     // 1. Predict / clear buffers
@@ -1364,13 +1368,15 @@ void FixedUpdate()
     // 5. Send particle data to renderer / raymarch pass
     renderMaterial.SetBuffer("_Particles", particleBuffer);
 }</code></pre>
-    <div class="cad-viewer-caption">
-      Unity C# manager · high-level GPU solver dispatch order
-    </div>
+    </details>
   </div>
 
   <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
-<pre style="margin:0;padding:1.2rem;overflow:auto;background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified HLSL density + pressure kernel
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 1.1rem;font-family:var(--mono);font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);">
+        HLSL compute shader · density estimate + Tait EOS pressure
+      </summary>
+      <pre style="margin:0;padding:1.2rem;overflow:auto;border-top:1px solid var(--border);background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified HLSL density + pressure kernel
 [numthreads(128, 1, 1)]
 void ComputeDensityPressure(uint3 id : SV_DispatchThreadID)
 {
@@ -1411,13 +1417,15 @@ void ComputeDensityPressure(uint3 id : SV_DispatchThreadID)
     _Particles[i].density = max(density, _RestDensity);
     _Particles[i].pressure = pressure;
 }</code></pre>
-    <div class="cad-viewer-caption">
-      HLSL compute shader · density estimate + Tait EOS pressure
-    </div>
+    </details>
   </div>
 
   <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
-<pre style="margin:0;padding:1.2rem;overflow:auto;background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified force kernel
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 1.1rem;font-family:var(--mono);font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);">
+        HLSL compute shader · pressure, viscosity, XSPH smoothing, and integration
+      </summary>
+      <pre style="margin:0;padding:1.2rem;overflow:auto;border-top:1px solid var(--border);background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified force kernel
 [numthreads(128, 1, 1)]
 void ComputeForces(uint3 id : SV_DispatchThreadID)
 {
@@ -1465,11 +1473,8 @@ void ComputeForces(uint3 id : SV_DispatchThreadID)
 
     _Particles[i] = pi;
 }</code></pre>
-    <div class="cad-viewer-caption">
-      HLSL compute shader · pressure, viscosity, XSPH smoothing, and integration
-    </div>
+    </details>
   </div>
-</div>
 
     <!-- SUPERSONIC WEDGE -->
 <div class="project-card">
