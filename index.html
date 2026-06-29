@@ -1515,63 +1515,46 @@ void ComputeForces(uint3 id : SV_DispatchThreadID)
   </div>
 </div>
 
-    <!-- AIRCRAFT DYNAMICS -->
+    <!-- TRUSS-BRACED WING AEROELASTICITY -->
 <div class="project-card">
-  <div class="project-tag">Stability & Control</div>
-  <div class="project-title">Aircraft Dynamics, Stability &amp; Control</div>
+  <div class="project-tag">Aeroelasticity · EME 139</div>
+  <div class="project-title">Truss-Braced Wing — Flutter &amp; Divergence Prediction</div>
   <p class="project-desc">
-    Two EAE 129 projects: a state-space simulation of longitudinal aircraft response with
-    handling-qualities and reduced-order analysis, plus a wind-tunnel study of the Aggie UAV's
-    static stability — deriving stability derivatives, neutral point, stability margin, and
-    trimmed elevator angle from measured lift and moment data.
+    Team term project modeling the dynamic and aeroelastic behavior of a truss-braced aircraft
+    wing. Built a simplified 1D Euler-Bernoulli beam model alongside a higher-fidelity Patran/Nastran
+    shell model of the airfoil, spar, ribs, skin, and struts, extracted the first 15 natural frequencies
+    and mode shapes, then used a reduced-order pitch/heave flutter model to estimate flutter speed
+    against a 250-knot operating envelope. Led the high-fidelity Patran model development — geometry,
+    meshing, and troubleshooting of the wing, rib, and skin connectivity.
   </p>
   <div class="project-tools">
+    <span class="tool-badge">Patran/Nastran</span>
     <span class="tool-badge">MATLAB</span>
-    <span class="tool-badge">Simulink</span>
-    <span class="tool-badge">Flying Qualities</span>
+    <span class="tool-badge">Modal Analysis</span>
+    <span class="tool-badge">Flutter & Divergence</span>
   </div>
 
   <div class="cad-viewer-wrap" style="margin-top:1.5rem;">
     <object
-      data="assets/EAE_129_Final_Project.pdf"
+      data="assets/EME%20139%20Team%20Term%20Paper%20Final%20Report.pdf"
       type="application/pdf"
       width="100%"
       height="520"
       style="display:block;background:#111820;">
       <iframe
-        src="assets/EAE_129_Final_Project.pdf"
+        src="assets/EME%20139%20Team%20Term%20Paper%20Final%20Report.pdf"
         width="100%"
         height="520"
         style="border:0;background:#111820;">
       </iframe>
     </object>
     <div class="cad-viewer-caption">
-      Longitudinal response simulation · embedded PDF preview
-    </div>
-  </div>
-
-  <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
-    <object
-      data="assets/EAE_129_Midterm_Project.pdf"
-      type="application/pdf"
-      width="100%"
-      height="520"
-      style="display:block;background:#111820;">
-      <iframe
-        src="assets/EAE_129_Midterm_Project.pdf"
-        width="100%"
-        height="520"
-        style="border:0;background:#111820;">
-      </iframe>
-    </object>
-    <div class="cad-viewer-caption">
-      Aggie UAV wind-tunnel stability study · embedded PDF preview
+      Truss-braced wing term paper · embedded PDF preview
     </div>
   </div>
 
   <div class="project-docs">
-    <a href="assets/EAE_129_Final_Project.pdf" data-fallbacks="assets/EAE%20129%20Final%20Project.pdf,EAE_129_Final_Project.pdf,EAE%20129%20Final%20Project.pdf" class="doc-link smart-pdf-link" target="_blank" rel="noopener">Response Sim</a>
-    <a href="assets/EAE_129_Midterm_Project.pdf" class="doc-link" target="_blank" rel="noopener">Wind-Tunnel</a>
+    <a href="assets/EME%20139%20Team%20Term%20Paper%20Final%20Report.pdf" class="doc-link" target="_blank" rel="noopener">Open Full Report</a>
   </div>
 </div>
 
