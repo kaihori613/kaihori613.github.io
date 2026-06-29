@@ -1239,21 +1239,37 @@
     </div>
 
     <!-- SPH SIM -->
-    <div class="project-card">
-      <div class="project-tag">Numerical Simulation · NeuralX</div>
-      <div class="project-title">SPH Fluid Simulation</div>
-      <p class="project-desc">
-        Real-time Smoothed Particle Hydrodynamics simulation built during a research internship at
-        NeuralX. Implemented particle-based density, pressure, viscosity, and interaction models on
-        GPU compute shaders, then profiled and optimized the pipeline for interactive fluid behavior.
-      </p>
-      <div class="project-tools">
-        <span class="tool-badge">Unity</span>
-        <span class="tool-badge">C#</span>
-        <span class="tool-badge">HLSL</span>
-        <span class="tool-badge">Compute Shaders</span>
-      </div>
-    </div>
+<div class="project-card">
+  <div class="project-tag">Numerical Simulation · NeuralX</div>
+  <div class="project-title">SPH Fluid Simulation</div>
+  <p class="project-desc">
+    Real-time Smoothed Particle Hydrodynamics simulation built during a research internship at
+    NeuralX. Implemented particle-based density, pressure, viscosity, and interaction models on
+    GPU compute shaders, then profiled and optimized the pipeline for interactive fluid behavior.
+  </p>
+  <div class="project-tools">
+    <span class="tool-badge">Unity</span>
+    <span class="tool-badge">C#</span>
+    <span class="tool-badge">HLSL</span>
+    <span class="tool-badge">Compute Shaders</span>
+  </div>
+
+  <div class="cad-viewer-wrap">
+    <video controls preload="metadata" poster="assets/sph_fluid_render_poster.jpg" style="width:100%;display:block;background:#000;">
+      <source src="assets/sph_fluid_render.mp4" type="video/mp4">
+      Your browser does not support embedded video.
+    </video>
+    <div class="cad-viewer-caption">Raymarched fluid surface · real-time render</div>
+  </div>
+
+  <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
+    <video controls preload="metadata" poster="assets/sph_particle_collision_poster.jpg" style="width:100%;display:block;background:#000;">
+      <source src="assets/sph_particle_collision.mp4" type="video/mp4">
+      Your browser does not support embedded video.
+    </video>
+    <div class="cad-viewer-caption">Particle-level collision test · scene view</div>
+  </div>
+</div>
 
     <!-- SUPERSONIC WEDGE -->
     <div class="project-card">
