@@ -1329,6 +1329,146 @@
       Particle-level collision test · debugging boundary response and particle stability
     </div>
   </div>
+    <div class="qfh-story-intro">
+    <div class="qfh-story-kicker">Code highlight · WCSPH solver structure</div>
+    <p>
+      The implementation was organized as a GPU compute pipeline: particle positions were
+      inserted into a spatial hash grid, sorted by cell, scanned into cell-start/cell-end ranges,
+      then used for local neighbor lookup during density, pressure, viscosity, smoothing,
+      and collision kernels.
+    </p>
+  </div>
+
+  <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
+<pre style="margin:0;padding:1.2rem;overflow:auto;background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified Unity C# solver loop
+void FixedUpdate()
+{
+    // 1. Predict / clear buffers
+    sphShader.SetFloat("_DeltaTime", Time.fixedDeltaTime);
+    sphShader.SetInt("_ParticleCount", particleCount);
+
+    // 2. Build spatial hash grid
+    Dispatch("ComputeCellKeys");
+    Dispatch("BitonicSort");
+    Dispatch("FindCellRanges");
+
+    // 3. SPH physics
+    Dispatch("ComputeDensityPressure");
+    Dispatch("ComputeForces");
+
+    // 4. Stabilization and integration
+    Dispatch("ApplyXSPH");
+    Dispatch("IntegrateParticles");
+    Dispatch("SolveBoundaryCollisions");
+
+    // 5. Send particle data to renderer / raymarch pass
+    renderMaterial.SetBuffer("_Particles", particleBuffer);
+}</code></pre>
+    <div class="cad-viewer-caption">
+      Unity C# manager · high-level GPU solver dispatch order
+    </div>
+  </div>
+
+  <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
+<pre style="margin:0;padding:1.2rem;overflow:auto;background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified HLSL density + pressure kernel
+[numthreads(128, 1, 1)]
+void ComputeDensityPressure(uint3 id : SV_DispatchThreadID)
+{
+    uint i = id.x;
+    if (i >= _ParticleCount) return;
+
+    float3 xi = _Particles[i].position;
+    float density = 0.0;
+
+    // Search neighboring grid cells only, not every particle
+    int3 baseCell = WorldToCell(xi);
+
+    for (int z = -1; z <= 1; z++)
+    for (int y = -1; y <= 1; y++)
+    for (int x = -1; x <= 1; x++)
+    {
+        int3 cell = baseCell + int3(x, y, z);
+        uint start = _CellStarts[HashCell(cell)];
+        uint end   = _CellEnds[HashCell(cell)];
+
+        for (uint n = start; n < end; n++)
+        {
+            uint j = _SortedParticleIndices[n];
+            float3 xj = _Particles[j].position;
+            float r = length(xi - xj);
+
+            if (r < _SmoothingRadius)
+            {
+                density += _ParticleMass * Poly6Kernel(r, _SmoothingRadius);
+            }
+        }
+    }
+
+    // Tait equation of state for weakly-compressible SPH
+    float pressure = _PressureStiffness *
+        (pow(density / _RestDensity, _TaitGamma) - 1.0);
+
+    _Particles[i].density = max(density, _RestDensity);
+    _Particles[i].pressure = pressure;
+}</code></pre>
+    <div class="cad-viewer-caption">
+      HLSL compute shader · density estimate + Tait EOS pressure
+    </div>
+  </div>
+
+  <div class="cad-viewer-wrap" style="margin-top:0.75rem;">
+<pre style="margin:0;padding:1.2rem;overflow:auto;background:#080b10;color:#e8e4d8;font-size:11px;line-height:1.6;font-family:var(--mono);"><code>// Simplified force kernel
+[numthreads(128, 1, 1)]
+void ComputeForces(uint3 id : SV_DispatchThreadID)
+{
+    uint i = id.x;
+    if (i >= _ParticleCount) return;
+
+    Particle pi = _Particles[i];
+
+    float3 pressureForce = 0;
+    float3 viscosityForce = 0;
+    float3 xsphCorrection = 0;
+
+    // Neighbor loop uses the same spatial grid lookup
+    ForEachNeighbor(pi.position, _SmoothingRadius)
+    {
+        Particle pj = _Particles[j];
+        float3 rij = pi.position - pj.position;
+        float r = length(rij);
+
+        if (r > 0.0 && r < _SmoothingRadius)
+        {
+            float3 gradW = SpikyGradient(rij, _SmoothingRadius);
+
+            pressureForce += -_ParticleMass *
+                (pi.pressure + pj.pressure) /
+                (2.0 * pj.density) * gradW;
+
+            viscosityForce += _Viscosity * _ParticleMass *
+                (pj.velocity - pi.velocity) /
+                pj.density * ViscosityLaplacian(r, _SmoothingRadius);
+
+            xsphCorrection += _ParticleMass *
+                (pj.velocity - pi.velocity) /
+                pj.density * Poly6Kernel(r, _SmoothingRadius);
+        }
+    }
+
+    float3 acceleration =
+        (pressureForce + viscosityForce) / pi.density +
+        _Gravity;
+
+    pi.velocity += acceleration * _DeltaTime;
+    pi.velocity += _XSPHStrength * xsphCorrection;
+    pi.position += pi.velocity * _DeltaTime;
+
+    _Particles[i] = pi;
+}</code></pre>
+    <div class="cad-viewer-caption">
+      HLSL compute shader · pressure, viscosity, XSPH smoothing, and integration
+    </div>
+  </div>
 </div>
 
     <!-- SUPERSONIC WEDGE -->
